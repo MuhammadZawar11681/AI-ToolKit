@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 // import { CgGitFork } from "react-icons/cg";
 // import { ImBlog } from "react-icons/im";
 import {
- // AiFillStar,
+  // AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
@@ -62,7 +62,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/about"  // here you put path of about us /path
+                to="/about" // here you put path of about us /path
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
@@ -75,7 +75,8 @@ function NavBar() {
                 to="/Projects " // here you put path of contact us /path
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }}
+                <AiOutlineFundProjectionScreen
+                  style={{ marginBottom: "2px" }}
                 />{" "}
                 Tools
               </Nav.Link>

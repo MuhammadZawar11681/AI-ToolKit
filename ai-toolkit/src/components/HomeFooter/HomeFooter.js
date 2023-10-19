@@ -1,7 +1,6 @@
-import React from 'react';
-import './HomeFooter.css'; // Import the CSS file for the HomeFooter
+import React from "react";
+import "./HomeFooter.css"; // Import the CSS file for the HomeFooter
 // import logo from "../../../src/Assets/logo.png"
-
 
 const HomeFooter = () => {
   return (
@@ -20,16 +19,22 @@ const HomeFooter = () => {
         <h3>Sitemap</h3>
         <p>All our pages</p>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/tools">Tools</a></li>
-          <li><a href="/contact">Contact Us</a></li>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/tools">Tools</a>
+          </li>
+          <li>
+            <a href="/contact">Contact Us</a>
+          </li>
         </ul>
       </div>
       <div className="right">
-        <div className="logo">
-          {/* src={logo} */}
-        </div>
+        <div className="logo">{/* src={logo} */}</div>
         <div className="contact-info">
           <div className="call">
             <i className="fas fa-phone"></i> Call: +92-317-988-9883

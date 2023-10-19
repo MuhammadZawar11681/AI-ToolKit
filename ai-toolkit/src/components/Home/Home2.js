@@ -3,8 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Tilt from "react-parallax-tilt";
 import aboutimg from "../../Assets/aboutimage.png";
 import Tools from "../Tools/Projects";
-import HomeFooter from "../HomeFooter/HomeFooter"
-
+import HomeFooter from "../HomeFooter/HomeFooter";
 
 // import {
 //   AiFillGithub,
@@ -15,40 +14,39 @@ import HomeFooter from "../HomeFooter/HomeFooter"
 
 function Home2() {
   return (
-    
     <Container fluid className="home-about-section" id="about">
       <Container>
-      
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
               About Our<span className="purple"> AI ToolKit </span>
             </h1>
             <p className="home-about-body">
-            Artificial intelligence (AI) technology has advanced in recent years, making it more sophisticated and capable of performing complex tasks. In this modern era of technology, artificial intelligence has revolutionized the way we interact with various forms of media.
-          
-              <br />Many AI tools Include like
+              Artificial intelligence (AI) technology has advanced in recent
+              years, making it more sophisticated and capable of performing
+              complex tasks. In this modern era of technology, artificial
+              intelligence has revolutionized the way we interact with various
+              forms of media.
+              <br />
+              Many AI tools Include like
               <i>
-                <b className="purple"> Content Generation, Text to speect and Video . </b>
+                <b className="purple">
+                  {" "}
+                  Content Generation, Text to speect and Video .{" "}
+                </b>
               </i>
-              
               etc &nbsp;
               <i>
                 <b className="purple">Web Technologies </b>based on the{" "}
-                <b className="purple">
-                  Artificial Intelligence.
-                </b>
+                <b className="purple">Artificial Intelligence.</b>
               </i>
               <br />
               <br />
-              
-              
-              
             </p>
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={aboutimg} className="img-fluid abt-img" alt="avatar" /> 
+              <img src={aboutimg} className="img-fluid abt-img" alt="avatar" />
               {/* myImg */}
             </Tilt>
           </Col>
@@ -104,9 +102,8 @@ function Home2() {
           </Col>
         </Row> */}
       </Container>
-      <Tools/>
-      <HomeFooter/>
-      
+      <Tools />
+      <HomeFooter />
     </Container>
   );
 }

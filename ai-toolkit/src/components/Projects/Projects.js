@@ -18,7 +18,7 @@ function Projects() {
           AI <strong className="purple">Tools </strong>
         </h1>
         <p style={{ color: "white" }}>
-        These are some of the services we are providing
+          These are some of the services we are providing
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">

@@ -21,7 +21,6 @@ function Home() {
               </h1>
 
               <h1 className="heading-name">
-                
                 <strong className="main-name">' AI TOOLKIT'</strong>
               </h1>
 

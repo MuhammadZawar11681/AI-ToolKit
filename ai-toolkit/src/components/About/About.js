@@ -33,9 +33,9 @@ function About() {
             {/* about image resourse */}
           </Col>
         </Row>
-        <br/>
-        <br/>
-       
+        <br />
+        <br />
+
         <h1 className="project-heading">
           <strong className="purple">Tools</strong> We Provide
         </h1>
