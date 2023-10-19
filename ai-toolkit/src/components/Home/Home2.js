@@ -2,7 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Tilt from "react-parallax-tilt";
 import aboutimg from "../../Assets/aboutimage.png";
-import Projects from "../Tools/Projects";
+import Tools from "../Tools/Projects";
+import HomeFooter from "../HomeFooter/HomeFooter"
 
 
 // import {
@@ -103,7 +104,9 @@ function Home2() {
           </Col>
         </Row> */}
       </Container>
-      <Projects/>
+      <Tools/>
+      <HomeFooter/>
+      
     </Container>
   );
 }
