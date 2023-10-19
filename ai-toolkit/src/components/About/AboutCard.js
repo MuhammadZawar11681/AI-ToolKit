@@ -8,33 +8,37 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Soumyajit Behera </span>
-            from <span className="purple"> Bhubaneswar, India.</span>
-            <br /> I am a final year student pursuing an Integrated MSc (IMSc)
-            in Maths and Computing at BIT Mesra.
+          The integration of <span className="purple">Artificial Intelligence (AI) </span>
+          into a comprehensive web application presents exciting opportunities across various domains.
+            <br /> This all-in-one platform combines text-to-speech, speech-to-text, image generation, and video creation, benefiting content creators, educators, and professionals by streamlining tasks and enhancing accessibility. It enables users to
+             convert content seamlessly across different media formats, supporting effective communication and interactive learning.
             <br />
-            Additionally, I am currently employed as a software developer at
-            Juspay.
+            <br/>
+            Additionally, it encourages artistic expression and boosts workflow efficiency, aligning with the increasing demand for
+             AI-driven applications to enhance daily life and content creation.
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+           
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games
+              <ImPointRight /> Content Generation
             </li>
             <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
+              <ImPointRight /> Text To Speech
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+              <ImPointRight /> Speech TO Text
+            </li>
+            <li className="about-activity">
+              <ImPointRight /> Text To Video
             </li>
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+            "AI ToolKit"{" "}
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          {/* <footer className="blockquote-footer">NULL</footer> */}
         </blockquote>
       </Card.Body>
     </Card>
