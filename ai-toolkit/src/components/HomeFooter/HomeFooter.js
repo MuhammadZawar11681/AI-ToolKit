@@ -2,6 +2,7 @@ import React from 'react';
 import './HomeFooter.css'; // Import the CSS file for the HomeFooter
 // import logo from "../../../src/Assets/logo.png"
 
+
 const HomeFooter = () => {
   return (
     <footer className="homefooter">

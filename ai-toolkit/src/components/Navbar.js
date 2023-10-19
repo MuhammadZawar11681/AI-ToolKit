@@ -72,11 +72,10 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to=" " // here you put path of contact us /path
+                to="/Projects " // here you put path of contact us /path
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
+                <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }}
                 />{" "}
                 Tools
               </Nav.Link>
