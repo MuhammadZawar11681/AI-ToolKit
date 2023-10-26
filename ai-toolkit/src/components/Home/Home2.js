@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Tilt from "react-parallax-tilt";
 import aboutimg from "../../Assets/aboutimage.png";
 import Tools from "../Tools/Projects";
-import HomeFooter from "../HomeFooter/HomeFooter";
 
 // import {
 //   AiFillGithub,
@@ -103,7 +102,6 @@ function Home2() {
         </Row> */}
       </Container>
       <Tools />
-      <HomeFooter />
     </Container>
   );
 }
