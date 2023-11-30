@@ -6,7 +6,7 @@ const HomeFooter = () => {
   return (
     <footer className="homefooter">
       <div className="left">
-        <h3>Contact Us</h3>
+        <h3>Contact us</h3>
         <p>Send us a message</p>
         <form>
           <input type="text" placeholder="Full Name" />
