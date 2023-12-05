@@ -7,7 +7,7 @@ const HomeFooter = () => {
     <footer className="homefooter">
       <div className="left">
         <h3>Contact us</h3>
-        <p>Send us message</p>
+        <p>Send Us a Message</p>
         <form>
           <input type="text" placeholder="Full Name" />
           <input type="email" placeholder="Your Email" />
