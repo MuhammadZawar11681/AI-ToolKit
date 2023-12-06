@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 // import Resume from "./components/Resume/ResumeNew";
 import Projects from "./components/Projects/Projects";
 import Tools from "../src/components/Tools/Projects";
+import ContentGeneration from "./components/ContentGeneration/About"
 
 import {
   BrowserRouter as Router,
@@ -42,6 +43,7 @@ function App() {
           <Route path="/Projects" element={<Projects />} />
           <Route path="/project" element={<Tools />} />
           <Route path="/project" element={<Tools />} />
+          <Route path="/ContentGeneration" element={<ContentGeneration />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
 

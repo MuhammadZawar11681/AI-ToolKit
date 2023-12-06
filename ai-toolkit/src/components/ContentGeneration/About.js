@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
-import Toolstack from "./Toolstack";
+
 
 function About() {
   return (
@@ -20,26 +20,19 @@ function About() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know About <strong className="purple">AI ToolKit</strong>
+              <strong className="purple">Content Generation</strong>
             </h1>
             <Aboutcard />
           </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={laptopImg} alt="about" className="img-fluid" />
-            {/* about image resourse */}
-          </Col>
+          
         </Row>
+
+        
         <br />
         <br />
 
-        <h1 className="project-heading">
-          <strong className="purple">Tools</strong> We Provide
-        </h1>
-        <Toolstack />
+        
+      
       </Container>
     </Container>
   );

@@ -95,7 +95,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to=" " // here you put path of contact us /path
+                to="/ContentGeneration " // here you put path of contact us /path
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Content Generation
