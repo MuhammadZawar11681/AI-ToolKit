@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Projects from "./components/Projects/Projects";
 import Tools from "../src/components/Tools/Projects";
 import ContentGeneration from "./components/ContentGeneration/About"
+import TextToImage from "./components/TextToImage/About"
 
 import {
   BrowserRouter as Router,
@@ -44,6 +45,7 @@ function App() {
           <Route path="/project" element={<Tools />} />
           <Route path="/project" element={<Tools />} />
           <Route path="/ContentGeneration" element={<ContentGeneration />} />
+          <Route path="/TextToImage" element={<TextToImage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
 
