@@ -35,9 +35,7 @@ function AboutCard() {
             </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "AI ToolKit"{" "}
-          </p>
+          
           {/* <footer className="blockquote-footer">NULL</footer> */}
         </blockquote>
       </Card.Body>

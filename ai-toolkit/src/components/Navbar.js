@@ -92,6 +92,26 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/ContentGeneration " // here you put path of contact us /path
+                onClick={() => updateExpanded(false)}
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Content Generation
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/TextToImage " // here you put path of contact us /path
+                onClick={() => updateExpanded(false)}
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Text To Image
+              </Nav.Link>
+            </Nav.Item>
+
             {/* <Nav.Item>
               <Nav.Link
                 href=" "
