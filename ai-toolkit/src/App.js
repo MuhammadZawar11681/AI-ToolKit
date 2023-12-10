@@ -7,8 +7,8 @@ import Footer from "./components/Footer";
 // import Resume from "./components/Resume/ResumeNew";
 import Projects from "./components/Projects/Projects";
 import Tools from "../src/components/Tools/Projects";
-import ContentGeneration from "./components/ContentGeneration/About"
-import TextToImage from "./components/TextToImage/About"
+import ContentGeneration from "./components/ContentGeneration/About";
+import TextToImage from "./components/TextToImage/About";
 
 import {
   BrowserRouter as Router,
