@@ -22,9 +22,9 @@
 // export default AboutCard;
 import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import Spinner from "react-bootstrap/Spinner";
+//import Button from "react-bootstrap/Button";
+//import Form from "react-bootstrap/Form";
+//import Spinner from "react-bootstrap/Spinner";
 
 const API_TOKEN = "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";
 
