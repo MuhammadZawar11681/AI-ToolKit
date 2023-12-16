@@ -43,7 +43,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/Projects" element={<Projects />} />
           <Route path="/project" element={<Tools />} />
-          <Route path="/project" element={<Tools />} />
+          <Route path="/project" elemen t={<Tools />} />
           <Route path="/ContentGeneration" element={<ContentGeneration />} />
           <Route path="/TextToImage" element={<TextToImage />} />
           <Route path="*" element={<Navigate to="/" />} />
