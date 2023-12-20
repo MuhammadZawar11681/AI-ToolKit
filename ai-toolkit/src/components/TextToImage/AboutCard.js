@@ -1,30 +1,4 @@
-// try 1 for text to image
-// import React from "react";
-// import Card from "react-bootstrap/Card";
 
-
-// function AboutCard() {
-//   return (
-//     <Card className="quote-card-view">
-//       <Card.Body>
-//         <blockquote className="blockquote mb-0">
-//           <p style={{ textAlign: "justify" }}>
-//             here u add Text to image CODE
-
-//           </p>
-
-
-
-
-
-//           {/* <footer className="blockquote-footer">NULL</footer> */}
-//         </blockquote>
-//       </Card.Body>
-//     </Card>
-//   );
-// }
-
-// export default AboutCard;
 import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
@@ -37,31 +11,75 @@ const AboutCard = () => {
   const [loading, setLoading] = useState(false);
   const [output, setOutput] = useState(null);
 
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   setLoading(true);
+
+  //   const input = event.target.elements.input.value;
+  //   const response = await fetch(
+  //     "https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4",
+  //     {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         Authorization: `Bearer ${API_TOKEN}`,
+  //       },
+  //       body: JSON.stringify({ inputs: input }),
+  //     }
+  //   );
+
+  //   if (!response.ok) {
+  //     throw new Error("Failed to generate image");
+  //   }
+
+  //   const blob = await response.blob();
+  //   setOutput(URL.createObjectURL(blob));
+  //   setLoading(false);
+  // };
+
+
+  // gpt code starts
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
 
     const input = event.target.elements.input.value;
-    const response = await fetch(
-      "https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${API_TOKEN}`,
-        },
-        body: JSON.stringify({ inputs: input }),
+
+    const intervalId = setInterval(async () => {
+      try {
+        const response = await fetch(
+          "https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${API_TOKEN}`,
+            },
+            body: JSON.stringify({ inputs: input }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to generate image");
+        }
+
+        const blob = await response.blob();
+        setOutput(URL.createObjectURL(blob));
+
+        // Check if the image is generated (you might need to adjust the condition)
+        if (blob.size > 0) {
+          setLoading(false);
+          clearInterval(intervalId); // Clear the interval once the image is generated
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        setLoading(false);
+        clearInterval(intervalId); // Clear the interval in case of an error
       }
-    );
-
-    if (!response.ok) {
-      throw new Error("Failed to generate image");
-    }
-
-    const blob = await response.blob();
-    setOutput(URL.createObjectURL(blob));
-    setLoading(false);
+    }, 5000); // Set the interval duration (1 second in this example)
   };
+
+  //   // gpt code ends
 
   const handleDownload = () => {
     if (output) {
