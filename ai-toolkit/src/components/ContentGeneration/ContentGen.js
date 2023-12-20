@@ -111,7 +111,8 @@ function ContentGen() {
         ...apiMessages //array[messge1,messge2 messge3,messge4]
       ]
     }
-    const KEY = "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";
+
+    const KEY = process.env.REACT_APP_OPENAI_API;
 
     await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
