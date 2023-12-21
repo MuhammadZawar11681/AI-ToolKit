@@ -97,7 +97,7 @@ const AboutCard = () => {
       <Card.Body >
         <blockquote className="blockquote mb-0 text-center">
           <div className="container mt-3">
-            <h1 className="mb-4">Conevert your Text To Image With <span className="purple">AI</span></h1>
+            <h1 className="mb-4">Convert your Text To Image With <span className="purple">AI</span></h1>
             <p className="lead">Describe the image you want to generate below</p>
             <Form onSubmit={handleSubmit} className="row justify-content-center">
               <Form.Group controlId="formInput" className="col-8 col-md-6 mb-2">
