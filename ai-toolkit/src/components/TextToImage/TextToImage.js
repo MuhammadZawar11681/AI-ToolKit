@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import Aboutcard from "./AboutCard";
+import Aboutcard from "./ImageCard";
 
 
 function About() {

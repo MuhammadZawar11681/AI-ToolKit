@@ -148,7 +148,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
+// import logo from "../Assets/logo.png";
+import logo3 from "../Assets/logo3.png";
 import { Link } from "react-router-dom";
 import {
   AiOutlineHome,
@@ -180,7 +181,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+          <img src={logo3} className="img-fluid logo" alt="brand" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -235,6 +236,29 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 Text To Image
+              </NavDropdown.Item>
+              {/* changes by yushaa */}
+
+              <NavDropdown.Item
+                as={Link}
+                to="/TextToSpeech"
+                onClick={() => updateExpanded(false)}
+              >
+                Text To Speech
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                as={Link}
+                to="/SpeechToText"
+                onClick={() => updateExpanded(false)}
+              >
+                Speech To Text
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                as={Link}
+                to="/TextToVideo"
+                onClick={() => updateExpanded(false)}
+              >
+                Text To Video
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
