@@ -5,7 +5,7 @@ import { useState } from "react";
 import useClipboard from "react-use-clipboard";
 import React from "react";
 import Card from "react-bootstrap/Card";
-// import "./SpeechToText.css";
+import "./SpeechToText.css";
 // import SpeechRecognition from 'react-speech-recognition';
 
 const SpeechToTextCard = () => {
