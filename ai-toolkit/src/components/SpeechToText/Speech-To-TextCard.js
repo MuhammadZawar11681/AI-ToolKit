@@ -1,10 +1,10 @@
 import SpeechRecognition, {
   useSpeechRecognition,
-} from "react-speech-recognition"; 
+} from "react-speech-recognition";
 import useClipboard from "react-use-clipboard";
 import React from "react";
 import Card from "react-bootstrap/Card";
-import "./speechToText.css";
+import "./SpeechToText.css";
 
 // import SpeechRecognition from 'react-speech-recognition';
 
