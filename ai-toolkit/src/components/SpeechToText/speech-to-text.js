@@ -24,10 +24,12 @@ function SpeechToText() {
             <SpeechToTextCard />
           </Col>
         </Row>
+        
 
         <br />
         <br />
       </Container>
+      
     </Container>
   );
 }
