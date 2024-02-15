@@ -1,0 +1,52 @@
+/* textToSpeech.css */
+
+.quote-card-view {
+    margin: 50px auto;
+    max-width: 600px;
+  }
+  
+  .text-to-speech-container {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .textbox {
+    width: 100%;
+    margin-top: 20px;
+    border: 3px solid rgb(12, 3, 54);
+  }
+  
+  .voice-select {
+    margin-top: 10px;
+    width: 200px;
+    background-color: #0c0438;
+    color: white;
+  }
+  
+  .rate-input {
+    width: 80%;
+    margin-top: 10px;
+  }
+  
+  .speak-button {
+    background-color: #450d68;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 225px;
+  }
+  
+  .speak-button:hover {
+    background-color: #0b0366;
+  }
+  
+  .speed-rate-text {
+    margin-top: 10px;
+    color: #888;
+  }
+  .btn-container{
+    align-items: center;
+  }

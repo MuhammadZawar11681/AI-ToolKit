@@ -1,0 +1,56 @@
+.container_SpeechToText {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.textContainer_SpeechToText {
+  height: 300px;
+  width: 80%;
+  margin: auto;
+  overflow: auto;
+  padding: 20px;
+  box-shadow: 2px 2px 10px 2px rgb(201, 200, 200);
+}
+
+.btnContainer_SpeechToText {
+  margin-top: 20px;
+}
+
+.btn_SpeechToText {
+  margin: 5px 10px;
+  padding: 10px 20px;
+  font-weight: bolder;
+  border: none;
+  background-color: cadetblue;
+  font-size: large;
+  border-radius: 3px;
+  color: white;
+}
+
+.btn_SpeechToText:hover {
+  scale: 1.1;
+}
+
+/* @media screen and (max-width: 992px) {
+  .container_SpeechToText {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container_SpeechToText {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .btnContainer_SpeechToText {
+    padding-top: 20px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+} */
