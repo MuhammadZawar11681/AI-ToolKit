@@ -6,8 +6,8 @@ let conf = {
 }
 const configuration = new Configuration(conf);
 const openai = new OpenAIApi(configuration);
-console.log(configuration)
-console.log(openai)
+// console.log(configuration)
+// console.log(openai)
 export async function sendMsgToOpenAI(message) {
     // const configuration = new Configuration({ apikey: a });
     // const openai = new OpenAIApi(configuration);
