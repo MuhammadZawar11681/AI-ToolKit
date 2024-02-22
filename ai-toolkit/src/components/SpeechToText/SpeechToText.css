@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Libre+Baskerville&family=Merriweather:wght@700&family=Work+Sans&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Libre+Baskerville&family=Merriweather:wght@700&family=Work+Sans&display=swap");
 
 
 
@@ -46,7 +46,7 @@
 
 button {
   /* position: absolute; */
-  background: rgb(17 166 131);
+  /* background: rgb(17 166 131);
   color: rgb(255 255 255);
   border-radius: 6px;
   padding: 16px 32px;
@@ -81,7 +81,7 @@ button:hover {
 
   .main-content {
     /*border:1px solid*/
-    font-size: 16px;
+    /* font-size: 16px;
     word-spacing: normal;
   }
 
@@ -98,4 +98,37 @@ button:hover {
   .counter-container p:first-child {
     margin-bottom: 0;
   }
+} */ */ */
+
+.main-container{
+
+  background-color: white;
+  /* border:3px solid rgb(237, 18, 18); */
+  display:flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+}
+
+.file-container{
+  /* background-color: white;
+  color: black; */
+  margin-top: 20px;
+  width:100%;
+  border-top: 10 px solod white;
+}
+
+.speech-container{
+  /* border:3px solid rgb(237, 18, 18); */
+  display: flex;
+  
+}
+.container{
+ 
+  
+  
+}
+
+.parent{
+  border: 5px solid white;
 }
