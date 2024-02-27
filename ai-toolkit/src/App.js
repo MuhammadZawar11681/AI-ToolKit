@@ -13,7 +13,6 @@ import TextToSpeech from "./components/TextToSpeech/text-to-speech";
 import SpeechToText from "./components/SpeechToText/speech-to-text";
 import TextToVideo from "./components/TextToVideo/TextToVideo";
 
-
 import {
   BrowserRouter as Router,
   Route,
@@ -47,7 +46,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/Projects" element={<Projects />} />
           <Route path="/project" element={<Tools />} />
-          <Route path="/project" elemen t={<Tools />} />
+          <Route path="/project" element={<Tools />} />
           <Route path="/ContentGeneration" element={<ContentGeneration />} />
           <Route path="/TextToImage" element={<TextToImage />} />
           <Route path="/TextToSpeech" element={<TextToSpeech />} />
