@@ -12,8 +12,6 @@ const SpeechToTextCard = () => {
   const { transcript, resetTranscript } = useSpeechRecognition();
   const [isCopied, setCopied] = useClipboard(transcript);
 
-  //subscribe to thapa technical for more awesome videos
-
   return (
     <Card className="quote-card-view h-600">
       <Card.Body>
