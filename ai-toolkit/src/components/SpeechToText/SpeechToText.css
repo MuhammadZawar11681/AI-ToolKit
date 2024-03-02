@@ -33,7 +33,8 @@
   scale: 1.1;
 }
 
-/* @media screen and (max-width: 992px) {
+/* in zawar file this is already in comment form
+ @media screen and (max-width: 992px) {
   .container_SpeechToText {
     width: 90%;
   }
@@ -53,4 +54,40 @@
     display: flex;
     flex-direction: column;
   }
+} */
+
+
+/* youshe code */
+
+/* .main-container{
+
+  background-color: white;
+   border:3px solid rgb(237, 18, 18); 
+  display:flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+} */
+
+.file-container{
+   background-color: white;
+  color: black;
+  margin-top: 20px;
+  width:100%;
+  border-top: 10 px solid white;
+}
+
+/* .speech-container{
+   border:3px solid rgb(237, 18, 18); 
+  display: flex;
+  
+} */
+/* .container{
+ 
+  
+  
+} */
+
+/* .parent{
+  border: 5px solid white;
 } */
