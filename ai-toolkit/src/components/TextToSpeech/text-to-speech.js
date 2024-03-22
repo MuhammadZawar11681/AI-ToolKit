@@ -7,7 +7,7 @@ import TextToSpeechCard from "./Text-to-SpeechCard";
 function TextToSpeech() {
     return (
         <Container fluid className="about-section">
-            <Particle />
+
             <Container>
                 <Row style={{ justifyContent: "center", padding: "10px" }}>
                     <Col
@@ -33,6 +33,8 @@ function TextToSpeech() {
 
 
             </Container>
+            <Particle />
+
         </Container>
     );
 }

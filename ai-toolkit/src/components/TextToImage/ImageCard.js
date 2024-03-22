@@ -112,7 +112,7 @@ const AboutCard = () => {
                 variant="primary"
                 type="submit"
                 disabled={loading}
-                className="col-4 col-md-2 mb-2"
+                className="col-4 col-md-3 mb-2 "
               >
                 {loading ? (
                   <>
