@@ -1,134 +1,103 @@
 
-/* @import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Libre+Baskerville&family=Merriweather:wght@700&family=Work+Sans&display=swap");
-
-
-
-
-
-.speech-container {
-  padding: 30px;
-  margin-top: 80px;
-}
-
-
-
-.speech-main-content {
-  max-width: 50rem;
-  width: 100%;
-  min-height: 400px;
-  height: auto;
-  padding: 18px 18px 120px 18px;
-  position: relative;
-  resize: none;
-  box-shadow: 0 12px 48px 0px rgb(109 117 141 / 20%);
-  background: rgb(255 255 255);
-  border: 0.5px solid rgb(231 233 245);
-  border-radius: 16px;
-}
-
-.speech-main-content:focus {
-  border: 0.3px solid rgb(43, 45, 56, 0.3);
-  outline: none;
-}
-
-
-.main-content {
-  font-size: 18px;
-  letter-spacing: 1px;
-  word-spacing: 2px;
-  line-height: 1.6;
-}
-
-.speech-btn-style{
-  display: flex;
-
-}
-
-button {
-  /* position: absolute; */
-  /* background: rgb(17 166 131);
-  color: rgb(255 255 255);
-  border-radius: 6px;
-  padding: 16px 32px;
-  border: none;
-  font-size: 18px;
-  letter-spacing: 1px;
+.container_SpeechToText {
+  width: 70%;
   margin: auto;
-  display: flex;
-  position: relative;
-  margin-top: -80px;
-  cursor: pointer;
+  text-align: center;
+  margin-top: 100px;
+
 }
 
-button:focus,
-button:hover {
-  background: rgb(42, 201, 164);
-  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+.textContainer_SpeechToText {
+  height: 300px;
+  width: 80%;
+  margin: auto;
+  overflow: auto;
+  padding: 20px;
+  box-shadow: 2px 2px 10px 2px rgb(201, 200, 200);
 }
 
-.counter-container {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
+.btnContainer_SpeechToText {
+  margin-top: 20px;
+}
+
+
+.btn_SpeechToText {
+  margin: 5px 10px;
+  padding: 10px 20px;
+  font-weight: bolder;
+
+  border: none;
+  background-color: cadetblue;
+  font-size: large;
+  border-radius: 3px;
+  color: white;
+}
+
+.btn_SpeechToText:hover {
+  scale: 1.1;
+}
+
+/* in zawar file this is already in comment form
+ @media screen and (max-width: 992px) {
+  .container_SpeechToText {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    margin-top: 20px;
+  .container_SpeechToText {
+    width: 100%;
   }
+}
 
- 
 
-  .main-content {
-    /*border:1px solid*/
-    /* font-size: 16px;
-    word-spacing: normal;
-  }
-
-  button {
-    padding: 12px 28px;
-    font-size: 16px;
-    margin-top: -70px;
-  }
-
-  .counter-container {
+@media screen and (max-width: 525px) {
+  .btnContainer_SpeechToText {
+    padding-top: 20px;
+    width: 70%;
+    margin: auto;
+    display: flex;
     flex-direction: column;
-  }
 
-  .counter-container p:first-child {
-    margin-bottom: 0;
   }
-} */ */ */
+} */
 
-.main-container{
+
+/* youshe code */
+
+
+/* .main-container{
 
   background-color: white;
-  /* border:3px solid rgb(237, 18, 18); */
+   border:3px solid rgb(237, 18, 18); 
+
   display:flex;
   flex-direction: row;
   align-items: flex-start;
 
-}
+
+} */
 
 .file-container{
-  /* background-color: white;
-  color: black; */
+   background-color: white;
+  color: black;
   margin-top: 20px;
   width:100%;
-  border-top: 10 px solod white;
+  border-top: 10 px solid white;
 }
 
-.speech-container{
-  /* border:3px solid rgb(237, 18, 18); */
+/* .speech-container{
+   border:3px solid rgb(237, 18, 18); 
   display: flex;
   
-}
-.container{
+} */
+/* .container{
  
   
   
-}
+} */
 
-.parent{
+/* .parent{
   border: 5px solid white;
-}
+} */
+
