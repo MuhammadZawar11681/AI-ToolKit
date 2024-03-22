@@ -9,9 +9,6 @@ import "./SpeechToText.css";
 import React, { useState, useRef, useEffect } from "react";
 
 // import SpeechRecognition from 'react-speech-recognition';
-import axios from "axios";
-const KEY = process.env.REACT_APP_OPENAI_API;
-const model = "whisper-1"
 
 import axios from "axios";
 const KEY = process.env.REACT_APP_OPENAI_API;
@@ -22,7 +19,6 @@ const SpeechToTextCard = () => {
   const [isCopied, setCopied] = useClipboard(transcript);
 
   const { browserSupportsSpeechRecognition } = useSpeechRecognition();
-
 
   const inputRef = useRef();
   const [file, setFile] = useState();
@@ -35,7 +31,6 @@ const SpeechToTextCard = () => {
       if (!file) {
         return;
       }
-
 
       const formData = new FormData();
       formData.append("model", model);
@@ -59,13 +54,12 @@ const SpeechToTextCard = () => {
     fetchAudioFile();
   }, [file]);
 
-
-  const inputRef = useRef();
-  const [file, setFile] = useState();
-  const [response, setResponse] = useState();
-  const onChangeFile = () => {
-    setFile(inputRef.current.files[0]);
-  }
+  // const inputRef = useRef();
+  // const [file, setFile] = useState();
+  // const [response, setResponse] = useState();
+  // const onChangeFile = () => {
+  //   setFile(inputRef.current.files[0]);
+  // }
   useEffect(() => {
     const fetchAudioFile = async () => {
       if (!file) {
@@ -81,28 +75,21 @@ const SpeechToTextCard = () => {
           headers: {
             "content-type": "multipart/form-data",
             Authorization: `Bearer ${KEY}`,
-
           },
         })
         .then((res) => {
           console.log(res.data);
-          setResponse(res.data)
+          setResponse(res.data);
         })
         .catch((err) => {
           console.log(err);
-        })
+        });
     };
     fetchAudioFile();
-
   }, [file]);
-
-
-
-
 
   if (!browserSupportsSpeechRecognition) {
     return null;
-
   }
 
   return (
