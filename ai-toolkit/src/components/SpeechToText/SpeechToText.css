@@ -1,8 +1,10 @@
+
 .container_SpeechToText {
   width: 70%;
   margin: auto;
   text-align: center;
   margin-top: 100px;
+
 }
 
 .textContainer_SpeechToText {
@@ -18,10 +20,12 @@
   margin-top: 20px;
 }
 
+
 .btn_SpeechToText {
   margin: 5px 10px;
   padding: 10px 20px;
   font-weight: bolder;
+
   border: none;
   background-color: cadetblue;
   font-size: large;
@@ -46,6 +50,7 @@
   }
 }
 
+
 @media screen and (max-width: 525px) {
   .btnContainer_SpeechToText {
     padding-top: 20px;
@@ -53,19 +58,23 @@
     margin: auto;
     display: flex;
     flex-direction: column;
+
   }
 } */
 
 
 /* youshe code */
 
+
 /* .main-container{
 
   background-color: white;
    border:3px solid rgb(237, 18, 18); 
+
   display:flex;
   flex-direction: row;
   align-items: flex-start;
+
 
 } */
 
@@ -91,3 +100,4 @@
 /* .parent{
   border: 5px solid white;
 } */
+
