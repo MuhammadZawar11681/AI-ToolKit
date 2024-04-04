@@ -1,17 +1,3 @@
-// const express = require("express");
-// const mongoose = require("mongoose");
-// const cors = require("cors");
-
-// const app = express();
-// app.use(express.json());
-// app.use(cors());
-// // some time the local host is not working so put //127.0.0.1
-// mongoose.connect("mongodb://127.0.0.1:27017/AI_ToolKit");
-
-// app.prependOnceListener(3001, () => {
-//   console.log("Server is running");
-// });
-
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
