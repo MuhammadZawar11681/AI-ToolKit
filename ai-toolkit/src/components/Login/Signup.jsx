@@ -254,7 +254,7 @@ function Signup() {
       </div>
 
       {/* Displaying all users' names and images */}
-      <div>
+      {/* <div>
         <h3>All Users</h3>
         <ul>
           {allUsers.map((user) => (
@@ -269,7 +269,7 @@ function Signup() {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 }
