@@ -151,9 +151,12 @@ const TextToSpeechCard = () => {
 
     return (
         <div className="d-flex flex-column flex-md-row h-100">
+
+
             <div className="w-100 w-md-1/3 p-4">
+
                 <div className="ms-4 me-4 mt-4 mb-4 text-xl">
-                    <h1>Text to Speech</h1>
+
                 </div>
                 <div className="ms-4 me-4">
                     {/* Form component that uses react-hook-form */}
@@ -218,7 +221,7 @@ const TextToSpeechCard = () => {
                     </Form>
                 </div>
             </div>
-            <div className="w-100 w-md-2/3 p-4 bg-light h-100">
+            <div className="w-100 w-md-2/3 p-4  h-100 load-box">
                 <div className="h-100 d-flex justify-content-center align-items-center">
                     {isLoading ? (
                         // Show loader when fetching audio data

@@ -13,6 +13,7 @@ import { MainContainer, ChatContainer, MessageList, Message, MessageInput, Typin
 
 
 
+
 function ContentGen() {
   // const msgEnd = useRef(null);
   // const [input, setInput] = useState("");
@@ -140,78 +141,81 @@ function ContentGen() {
 
   return (
 
+    <>
+
+
 
 
 
     // content-Gen tut code
 
-    <div className="Main-Parent">
-      <div className="sideBar">
+      <div className="Main-Parent">
+        <div className="sideBar">
 
-        <div className="upperside">
+          <div className="upperside">
 
-          <div className="uppersideTop">
-            <div className="upperSideBarHead">            <img src={logo} alt="" className="cg-logo" />
-              <span className="brand">AI Toolkit</span>
+            <div className="uppersideTop">
+              <div className="upperSideBarHead">            <img src={logo} alt="" className="cg-logo" />
+                <span className="brand">AI Toolkit</span>
+              </div>
+
+
+
+
+              <button className="midBtn"><img src="" alt="" className="addBtn" />New Chat</button>
+
+
+            </div>
+            <div className="upperSideBottom">
+              <button className="query"><img src={queryImg} alt="" className="queryimg" />What is Programming?</button>
+              <button className="query"><img src={queryImg} alt="" className="queryimg" />how to use an Api?</button>
             </div>
 
-
-
-
-            <button className="midBtn"><img src="" alt="" className="addBtn" />New Chat</button>
-
-
           </div>
-          <div className="upperSideBottom">
-            <button className="query"><img src={queryImg} alt="" className="queryimg" />What is Programming?</button>
-            <button className="query"><img src={queryImg} alt="" className="queryimg" />how to use an Api?</button>
+
+
+          <div className="lowerside">
+            <div className="listItems"><img src="" alt="" className="listItemsImg" />Home</div>
+            <div className="listItems"><img src="" alt="" className="listItemsImg" />Saved</div>
+            <div className="listItems"><img src="" alt="" className="listItemsImg" />Upgrade To Pro</div>
           </div>
 
         </div>
+        <div className="main">
+          <h1 className='chat-title'>Content Generator:</h1>
 
 
-        <div className="lowerside">
-          <div className="listItems"><img src="" alt="" className="listItemsImg" />Home</div>
-          <div className="listItems"><img src="" alt="" className="listItemsImg" />Saved</div>
-          <div className="listItems"><img src="" alt="" className="listItemsImg" />Upgrade To Pro</div>
-        </div>
+          {/* new code from gpt 3.5 tut starts here */}
 
-      </div>
-      <div className="main">
-        <h1 className='chat-title'>Content Generator:</h1>
+          <div className='Main'>
 
+            <div className='chat' style={{ position: 'relative', height: '600px', width: '700px' }}>
+              <MainContainer className="msg-container" >
+                <ChatContainer className="msg-container">
+                  <MessageList style={{ background: '#03001f' }} className='msg-list'
+                    scrollBehavior='smooth'
+                    typingIndicator={typing ? <TypingIndicator content="Genrating content for you,Please wait a moment" /> : null}
+                  >
+                    {messages.map((message, i) => {
+                      return <Message key={i} model={message} />
+                    })}
 
-        {/* new code from gpt 3.5 tut starts here */}
-
-        <div className='Main'>
-
-          <div className='chat' style={{ position: 'relative', height: '600px', width: '700px' }}>
-            <MainContainer className="msg-container" >
-              <ChatContainer className="msg-container">
-                <MessageList style={{ background: '#03001f' }} className='msg-list'
-                  scrollBehavior='smooth'
-                  typingIndicator={typing ? <TypingIndicator content="Genrating content for you,Please wait a moment" /> : null}
-                >
-                  {messages.map((message, i) => {
-                    return <Message key={i} model={message} />
-                  })}
-
-                </MessageList>
-                <MessageInput className='input' placeholder="type message here..." onSend={handleSend} />
-              </ChatContainer>
-            </MainContainer>
+                  </MessageList>
+                  <MessageInput className='input' placeholder="type message here..." onSend={handleSend} />
+                </ChatContainer>
+              </MainContainer>
 
 
-          </div>
-        </div >
+            </div>
+          </div >
 
 
-        {/* new code from gpt 3.5 tut  ends here */}
+          {/* new code from gpt 3.5 tut  ends here */}
 
 
-        {/* old code starts here */}
+          {/* old code starts here */}
 
-        {/* <div className="chats">
+          {/* <div className="chats">
           { <div className="chat">
             <img className="chatImg" src={userIcon} alt="user Icon" /><p className="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste beatae temporibus eaque debitis natus unde nobis quod odit quos, minus libero omnis veritatis molestiae corporis, necessitatibus provident! Ut, doloribus. Molestiae quas in a. Mollitia veritatis facilis dolor architecto commodi necessitatibus deleniti delectus laudantium consequuntur debitis, illo blanditiis earum animi in. Ratione illum quia mollitia ut amet veritatis, dolore voluptatibus officiis voluptatem, quasi soluta? Eos voluptates, sed voluptas praesentium odio at possimus accusamus dolores corrupti culpa eaque? Doloremque, perferendis iusto! Facilis explicabo ducimus impedit quia eaque officiis neque hic perspiciatis fuga porro tempora praesentium corrupti, at tenetur necessitatibus ullam possimus animi.</p>
           </div>
@@ -221,7 +225,7 @@ function ContentGen() {
           </div> } */}
 
 
-        {/* {messages.map((message, i) =>
+          {/* {messages.map((message, i) =>
             <div key={i} className={message.isBot ? "chat bot" : "chat"} >
               <img className="chatImg" src={message.isBot ? logo : userIcon} alt="brand Icon" /><p className="txt">{message.text}</p>
             </div>
@@ -230,13 +234,13 @@ function ContentGen() {
 
         </div> */}
 
-        {/* <div className="chatFooter">
+          {/* <div className="chatFooter">
           <div className="inp">
             <input type="text" placeholder="Send a Message..." name="" id="" */}
 
-        { /* value={input} onChange={(e) => { setInput(e.target.value) }}  />*/}
+          { /* value={input} onChange={(e) => { setInput(e.target.value) }}  />*/}
 
-        {/* <div className="send-parent">
+          {/* <div className="send-parent">
               <button className="send" onClick={handleSend} onKeyDown={e => e.key === 'Enter' ? handleSend :
                 ''} >
                 <img src={send} alt="send" />
@@ -247,10 +251,11 @@ function ContentGen() {
           <p>The model may produce incorrect result. version 2.O Dcember 7,2023</p>
         </div> */}
 
-        {/* old code ends */}
+          {/* old code ends */}
 
-      </div>
-    </div >
+        </div>
+      </div >
+    </>
   );
 }
 
