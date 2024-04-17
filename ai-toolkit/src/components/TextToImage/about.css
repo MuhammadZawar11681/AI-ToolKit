@@ -23,6 +23,7 @@ p {
 #gen-btn {
     margin-top: 6px;
     font-weight: bolder;
+    width: 200px;
 }
 
 #gen-btn:hover {

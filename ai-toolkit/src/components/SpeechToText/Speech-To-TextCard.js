@@ -1,6 +1,7 @@
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
+
 import useClipboard from "react-use-clipboard";
 //import React from "react";
 import Card from "react-bootstrap/Card";
@@ -53,11 +54,46 @@ const SpeechToTextCard = () => {
     fetchAudioFile();
   }, [file]);
 
+  // const inputRef = useRef();
+  // const [file, setFile] = useState();
+  // const [response, setResponse] = useState();
+  // const onChangeFile = () => {
+  //   setFile(inputRef.current.files[0]);
+  // }
+  useEffect(() => {
+    const fetchAudioFile = async () => {
+      if (!file) {
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append("model", model);
+      formData.append("file", file);
+
+      axios
+        .post("https://api.openai.com/v1/audio/transcriptions ", formData, {
+          headers: {
+            "content-type": "multipart/form-data",
+            Authorization: `Bearer ${KEY}`,
+          },
+        })
+        .then((res) => {
+          console.log(res.data);
+          setResponse(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    fetchAudioFile();
+  }, [file]);
+
   if (!browserSupportsSpeechRecognition) {
     return null;
   }
 
   return (
+    <div className="parent">
     <Card className="quote-card-view h-600">
       <Card.Body>
         <blockquote className="blockquote mb-0 text-center">
@@ -112,6 +148,7 @@ const SpeechToTextCard = () => {
         </>
       </Card.Body>
     </Card>
+    </div>
   );
 };
 
@@ -128,65 +165,76 @@ export default SpeechToTextCard;
 
 // import Card from "react-bootstrap/Card";
 // import "./SpeechToText.css";
-// import SpeechRecognition from 'react-speech-recognition';
+// // import SpeechRecognition from 'react-speech-recognition';
 // import axios from "axios";
 // const KEY = process.env.REACT_APP_OPENAI_API;
 // const model = "whisper-1"
 
 // const SpeechToTextCard = () => {
-//   // const [textToCopy, setTextToCopy] = useState();
-//   // const [isCopied, setCopied] = useClipboard(textToCopy, {
-//   //   successDuration: 1000,
-//   // });
+//   const [textToCopy, setTextToCopy] = useState();
+//   const [isCopied, setCopied] = useClipboard(textToCopy, {
+//     successDuration: 1000,
+//   });
 
-// const startListening = () =>
-//   SpeechRecognition.startListening({ continuous: true, language: "en-IN" });
-// const { transcript, browserSupportsSpeechRecognition } =
-//   useSpeechRecognition();
 
-//   // const inputRef = useRef();
-//   // const [file, setFile] = useState();
-//   // const [response, setResponse] = useState();
-//   // const onChangeFile = () => {
-//   //   setFile(inputRef.current.files[0]);
-//   // }
-//   // useEffect(() => {
-//   //   const fetchAudioFile = async () => {
-//   //     if (!file) {
-//   //       return;
-//   //     }
 
-//   //     const formData = new FormData();
-//   //     formData.append("model", model);
-//   //     formData.append("file", file);
+//   const startListening = () =>
+//     SpeechRecognition.startListening({ continuous: true, language: "en-IN" });
+//   const { transcript, browserSupportsSpeechRecognition } =
+//     useSpeechRecognition();
 
-//   //     axios
-//   //       .post("https://api.openai.com/v1/audio/transcriptions ", formData, {
-//   //         headers: {
-//   //           "content-type": "multipart/form-data",
-//   //           Authorization: `Bearer ${KEY}`,
 
-//   //         },
-//   //       })
-//   //       .then((res) => {
-//   //         console.log(res.data);
-//   //         setResponse(res.data)
-//   //       })
-//   //       .catch((err) => {
-//   //         console.log(err);
-//   //       })
-//   //   };
-//   //   fetchAudioFile();
+//   const inputRef = useRef();
+//   const [file, setFile] = useState();
+//   const [response, setResponse] = useState();
+//   const onChangeFile = () => {
+//     setFile(inputRef.current.files[0]);
+//   }
+//   useEffect(() => {
+//     const fetchAudioFile = async () => {
+//       if (!file) {
+//         return;
+//       }
 
-//   // }, [file]);
+//       const formData = new FormData();
+//       formData.append("model", model);
+//       formData.append("file", file);
 
-//   // if (!browserSupportsSpeechRecognition) {
-//   //   return null;
-//   // };
+//       axios
+//         .post("https://api.openai.com/v1/audio/transcriptions ", formData, {
+//           headers: {
+//             "content-type": "multipart/form-data",
+//             Authorization: `Bearer ${KEY}`,
+
+//           },
+//         })
+//         .then((res) => {
+//           console.log(res.data);
+//           setResponse(res.data)
+//         })
+//         .catch((err) => {
+//           console.log(err);
+//         })
+//     };
+//     fetchAudioFile();
+
+//   }, [file]);
+
+
+
+
+
+//   if (!browserSupportsSpeechRecognition) {
+//     return null;
+//   };
+
 
 //   return (
 
 //     <div className="parent">
+
+
+
 
 //       <Card className="quote-card-view h-600 main-container" >
 //         <Card.Body>
@@ -201,7 +249,8 @@ export default SpeechToTextCard;
 //           <>
 //             <div className="main-container">
 
-//               {/* <div className="speech-container">
+
+//               <div className="speech-container">
 //                 <div
 //                   className="speech-main-content"
 //                   onClick={() => setTextToCopy(transcript)}
@@ -223,8 +272,8 @@ export default SpeechToTextCard;
 //                     Stop Listening
 //                   </button>
 //                 </div>
-//               </div> */}
-//               {/* <div className="file-container">
+//               </div>
+//               <div className="file-container">
 //                 <h1>
 //                   upload audio file to convert it to speech!
 
@@ -236,8 +285,10 @@ export default SpeechToTextCard;
 
 //                   {response && <div>{JSON.stringify(response, null, 2)} </div>}
 
+
+
 //                 </h1>
-//               </div> */}
+//               </div>
 
 //             </div>
 //           </>

@@ -1,17 +1,3 @@
-// const express = require("express");
-// const mongoose = require("mongoose");
-// const cors = require("cors");
-
-// const app = express();
-// app.use(express.json());
-// app.use(cors());
-// // some time the local host is not working so put //127.0.0.1
-// mongoose.connect("mongodb://127.0.0.1:27017/AI_ToolKit");
-
-// app.prependOnceListener(3001, () => {
-//   console.log("Server is running");
-// });
-
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -46,6 +32,36 @@ app.post("/register", (req, res) => {
   EmployeeModel.create(req.body)
     .then((employees) => res.json(employees))
     .catch((err) => res.json(err));
+});
+app.get("/user/:email", (req, res) => {
+  const { email } = req.params;
+  // Query the database to find the user by email
+  EmployeeModel.findOne({ email })
+    .then((user) => {
+      if (user) {
+        // User found, return name and imageUrl
+        res.json({ name: user.name, imageUrl: user.image });
+      } else {
+        // User not found
+        res.status(404).json({ error: "User not found" });
+      }
+    })
+    .catch((error) => res.status(500).json({ error: error.message }));
+});
+
+app.get("/get-images", async (req, res) => {
+  try {
+    const employees = await EmployeeModel.find({});
+    const images = employees.map((employee) => ({
+      id: employee._id,
+      name: employee.name, // Assuming 'name' is the field storing employee's name
+      email: employee.email, // Assuming 'email' is the field storing employee's email
+      imageUrl: employee.image, // Assuming imageUrl is the field storing image URLs
+    }));
+    res.json({ status: "ok", data: images });
+  } catch (error) {
+    res.status(500).json({ status: "error", message: error.message });
+  }
 });
 
 const PORT = 3001; // Define the port to listen on
