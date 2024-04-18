@@ -21,6 +21,7 @@ function TextToSpeech() {
                         <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
                             <strong className="purple">Text To Speech Conversion</strong>
                         </h1>
+                        <h2 className="mb-4">Convert your Text To Speech With <span className="purple">AI</span></h2>
                         <TextToSpeechCard />
                     </Col>
 

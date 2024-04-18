@@ -1,0 +1,14 @@
+#vid-submit{
+   
+    margin-left: 1.5rem;
+    border:2px solid black;
+    border-radius: 8px;
+}
+#vid-submit:hover{
+
+}
+
+#vid-prompt{
+    border-radius: 15px;
+    color: purple;
+}
