@@ -1,4 +1,4 @@
-
+/* 
 .container_SpeechToText {
   width: 70%;
   margin: auto;
@@ -37,47 +37,6 @@
   scale: 1.1;
 }
 
-/* in zawar file this is already in comment form
- @media screen and (max-width: 992px) {
-  .container_SpeechToText {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .container_SpeechToText {
-    width: 100%;
-  }
-}
-
-
-@media screen and (max-width: 525px) {
-  .btnContainer_SpeechToText {
-    padding-top: 20px;
-    width: 70%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-
-  }
-} */
-
-
-/* youshe code */
-
-
-/* .main-container{
-
-  background-color: white;
-   border:3px solid rgb(237, 18, 18); 
-
-  display:flex;
-  flex-direction: row;
-  align-items: flex-start;
-
-
-} */
-
 .file-container{
    background-color: white;
   color: black;
@@ -86,18 +45,104 @@
   border-top: 10 px solid white;
 }
 
-/* .speech-container{
-   border:3px solid rgb(237, 18, 18); 
-  display: flex;
-  
-} */
-/* .container{
- 
-  
-  
-} */
 
 .parent{
   border: 5px solid white;
 }
+ */
+ .speech-to-text-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
 
+.speech-card {
+  width: 200%; /* Adjust width percentage as needed */
+  max-width: 1000px; /* Set a maximum width if necessary */
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Add padding for spacing inside the card */
+}
+
+.card-title {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-box {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+.transcript-text {
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.right-section {
+  width: 35%;
+  padding-left: 20px;
+}
+
+.file-upload-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.file-upload-container h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 10px auto;
+}
+
+pre {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  overflow: auto;
+}
