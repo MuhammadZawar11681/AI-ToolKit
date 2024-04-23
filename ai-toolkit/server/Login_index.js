@@ -8,10 +8,14 @@ const app = express();
 app.use(express.json());
 
 let corsOptions = {
-  origin: ['http://localhost:3000'],
-}
+  origin: ["http://localhost:3000"],
+};
 
 app.use(cors(corsOptions));
+mongoose.connect("mongodb://127.0.0.1:27017/AI_ToolKit", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 // Sometimes localhost may not work, so using 127.0.0.1
 // mongoose.connect("mongodb://127.0.0.1:27017/AI_ToolKit", {
@@ -70,30 +74,26 @@ app.get("/get-images", async (req, res) => {
   }
 });
 
-
 app.post("/api/video-gen", async (req, res) => {
   try {
-
-    const { prompt, token } = req.body
+    const { prompt, token } = req.body;
     const replicate = new Replicate({
-      auth: token
-    })
+      auth: token,
+    });
     const output = await replicate.run(
       "anotherjesse/zeroscope-v2-xl:9f747673945c62801b13b84701c783929c0ee784e4748ec062204894dda1a351",
       {
         input: {
-          prompt: prompt
-        }
+          prompt: prompt,
+        },
       }
     );
-    res.json(output)
-  }
-  catch (error) {
-    console.log(error)
-    res.json(error)
+    res.json(output);
+  } catch (error) {
+    console.log(error);
+    res.json(error);
   }
 });
-
 
 const PORT = 3001; // Define the port to listen on
 
