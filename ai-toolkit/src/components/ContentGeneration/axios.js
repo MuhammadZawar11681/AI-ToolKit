@@ -1,7 +1,6 @@
 import axios from "axios";
 
-const OPENAI_API_KEY =
-  "sk-proj-GDpODmqBiA2OXOJkQ5dbT3BlbkFJcZSTj6BdGjbYWxMiJ0iY";
+const OPENAI_API_KEY = process.env.REACT_APP_OPEN_API;
 
 const instance = axios.create({
   baseURL: "https://api.openai.com/v1/",
