@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 //import Particle from "../Particle";
@@ -7,6 +8,7 @@ import SpeechToTextCard from "./Speech-To-TextCard";
 function SpeechToText() {
   return (
     <Container fluid className="about-section">
+
       {/* <Particle /> */}
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
@@ -19,6 +21,7 @@ function SpeechToText() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+
               <strong className="purple">Speech To Text Conversion</strong>
             </h1>
             <SpeechToTextCard />
@@ -27,6 +30,7 @@ function SpeechToText() {
 
         <br />
         <br />
+
       </Container>
     </Container>
   );

@@ -1,3 +1,4 @@
+
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
@@ -11,12 +12,14 @@ import React, { useState, useRef, useEffect } from "react";
 // import SpeechRecognition from 'react-speech-recognition';
 
 import axios from "axios";
+
 const KEY = process.env.REACT_APP_OPENAI_API;
 const model = "whisper-1";
 
 const SpeechToTextCard = () => {
   const { transcript, resetTranscript } = useSpeechRecognition();
   const [isCopied, setCopied] = useClipboard(transcript);
+
 
   const { browserSupportsSpeechRecognition } = useSpeechRecognition();
 
@@ -70,12 +73,15 @@ const SpeechToTextCard = () => {
       formData.append("model", model);
       formData.append("file", file);
 
+
       axios
         .post("https://api.openai.com/v1/audio/transcriptions ", formData, {
+
           headers: {
             "content-type": "multipart/form-data",
             Authorization: `Bearer ${KEY}`,
           },
+
         })
         .then((res) => {
           console.log(res.data);
@@ -84,9 +90,11 @@ const SpeechToTextCard = () => {
         .catch((err) => {
           console.log(err);
         });
+
     };
     fetchAudioFile();
   }, [file]);
+
 
   if (!browserSupportsSpeechRecognition) {
     return null;
@@ -128,6 +136,7 @@ const SpeechToTextCard = () => {
                   Clear Text
                 </button>
                 <button className="btn_SpeechToText" onClick={setCopied}>
+
                   {isCopied ? "Copied! 👍" : "Copy?"}
                 </button>
               </div>
@@ -146,6 +155,7 @@ const SpeechToTextCard = () => {
               </h1>
             </div>
           </>
+
         </Card.Body>
       </Card>
     </div>
