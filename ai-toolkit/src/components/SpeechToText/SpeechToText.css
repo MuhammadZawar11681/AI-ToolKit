@@ -53,34 +53,73 @@
  .speech-to-text-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 50px;
+  margin-left: 250px;
 }
 
 .speech-card {
-  width: 200%; /* Adjust width percentage as needed */
-  max-width: 1000px; /* Set a maximum width if necessary */
+  width: 300%; /* Adjust width percentage as needed */
+  max-width: 1500px; /* Set a maximum width if necessary */
   background-color: #f8f9fa;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px; /* Add padding for spacing inside the card */
+  border: 4px solid purple; /*setting border for the speech card*/
+  margin-bottom: 300px;
 }
+
+/* for setting up width of card */
+
+.speech-to-text-container{
+  width:1500px;
+  margin-top:200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* changing font style from light to bold for section outline */
+
+.sec-outline{
+  font-weight: bolder;
+  color:purple;
+}
+
+.sec-title{
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+
 
 .card-title {
   text-align: center;
   font-size: 28px;
-  color: #333;
+  color: #791386;
   margin-bottom: 20px;
 }
+.title{
+  color: purple;
+  margin-bottom: 40px;
+ font-weight: bolder;
+ 
 
+}
+.sub-title{
+  color: purple;
+  margin-bottom: 45px;
+}
 .content-wrapper {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .left-section {
   width: 60%;
   display: flex;
   flex-direction: column;
+  border-right: 2px solid purple;
 }
 
 .text-box {
@@ -102,21 +141,31 @@
   margin-top: 20px;
 }
 
-.btn {
+.s-t-t-btn {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: purple;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
-.btn:hover {
-  background-color: #0056b3;
+.s-t-t-btn:hover {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight:bolder;
+ 
+  border-radius: 5px;
+  background-color: white;
+  color: purple;
+  cursor:pointer;
+  border: 2px solid purple;
+  transition: background-color 0.4s ease;
 }
+
+
 
 .right-section {
   width: 35%;

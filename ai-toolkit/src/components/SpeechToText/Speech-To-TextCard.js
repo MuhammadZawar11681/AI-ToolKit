@@ -153,6 +153,12 @@
 
 // export default SpeechToTextCard;
 
+
+// working for speech to text code card
+
+
+
+
 import React, { useState, useRef, useEffect } from "react";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import useClipboard from "react-use-clipboard";
@@ -201,15 +207,19 @@ const SpeechToTextCard = () => {
 
   return (
     <div className="speech-to-text-container">
-      <Card className="speech-card">
+      <Card className="speech-card main">
         <Card.Body>
-          <h1 className="card-title">Convert Speech To Text With AI</h1>
+          <h1 className=" title">Convert Speech To Text With AI</h1>
           <div className="content-wrapper">
             <div className="left-section">
+              <h4 className="sec-title">Real Time Conversion</h4>
+              <p className="sec-outline">Click on Start listening to convert your own audio into text in real time:</p>
+
               <div className="text-box">
                 <p className="transcript-text">{transcript}</p>
               </div>
               <div className="button-container">
+
                 <button className="btn" onClick={() => SpeechRecognition.startListening({ continuous: true })}>
                   Start Listening
                 </button>
@@ -225,8 +235,10 @@ const SpeechToTextCard = () => {
               </div>
             </div>
             <div className="right-section">
+              <h4 className="sec-title">Audio File Conversion</h4>
+              <p className="sec-outline">Upload an MP3 file to convert it to text:</p>
               <div className="file-upload-container">
-                <h3>Upload an MP3 file to convert it to text:</h3>
+
                 <input type="file" ref={inputRef} accept=".mp3" onChange={onChangeFile} />
                 {response && <pre>{JSON.stringify(response, null, 2)}</pre>}
               </div>
