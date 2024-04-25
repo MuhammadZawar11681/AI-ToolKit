@@ -16,8 +16,8 @@ function ContentGen() {
   const [typing, setTyping] = useState(false);
   const [messages, setMessages] = useState([
     {
-      message: "Hey there, I am ChatGPT. Feel free to chat with me!",
-      sender: "ChatGPT",
+      message: "Hey there, I am AI ToolKit. Feel free to chat with me!",
+      sender: "AITool",
     },
   ]);
 
@@ -46,7 +46,7 @@ function ContentGen() {
 
   const processMessageToChatGpt = async (chatMessages) => {
     const apiMessages = chatMessages.map((messageObject) => ({
-      role: messageObject.sender === "ChatGPT" ? "assistant" : "user",
+      role: messageObject.sender === "Con" ? "assistant" : "user",
       content: messageObject.message,
     }));
 
@@ -92,13 +92,13 @@ function ContentGen() {
   return (
     <div className="content-container">
       <div className="sidebar">
-        <img src={logo} alt="ChatGPT Logo" className="logo" />
+        <img src={logo} alt="Chat Logo" className="logo" />
         <button className="sidebar-btn" onClick={() => setMessages([])}>
           New Chat
         </button>
       </div>
       <div className="chat-container">
-        <h1 className="chat-title">ChatGPT</h1>
+        <h1 className="chat-title">Content Generation</h1>
         <div className="chat">
           <MainContainer>
             <ChatContainer>
@@ -113,7 +113,7 @@ function ContentGen() {
                     <Message model={message} />
                   </div>
                 ))}
-                {typing && <TypingIndicator content="ChatGPT is typing..." />}
+                {typing && <TypingIndicator content="Tookit AI is typing..." />}
                 <div ref={messageEndRef}></div>
               </MessageList>
             </ChatContainer>
