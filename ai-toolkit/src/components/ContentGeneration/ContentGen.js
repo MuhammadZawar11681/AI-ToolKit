@@ -8,11 +8,13 @@ import {
 } from "@chatscope/chat-ui-kit-react";
 import "./content.css";
 import logo from "../ContentGeneration/logo.png";
+import { useUser } from "../UserContext";
 
 // Replace 'YOUR_OPENAI_API_KEY' with your actual OpenAI API key
 const API_KEY = process.env.REACT_APP_OPENAI_API;
 
 function ContentGen() {
+  const { user } = useUser();
   const [typing, setTyping] = useState(false);
   const [messages, setMessages] = useState([
     {
@@ -99,49 +101,57 @@ function ContentGen() {
       </div>
       <div className="chat-container">
         <h1 className="chat-title">Content Generation</h1>
-        <div className="chat">
-          <MainContainer>
-            <ChatContainer>
-              <MessageList>
-                {messages.map((message, i) => (
-                  <div
-                    key={i}
-                    className={`message-container ${
-                      message.sender === "user" ? "user" : "bot"
-                    }`}
-                  >
-                    <Message model={message} />
-                  </div>
-                ))}
-                {typing && <TypingIndicator content="Tookit AI is typing..." />}
-                <div ref={messageEndRef}></div>
-              </MessageList>
-            </ChatContainer>
-          </MainContainer>
-          <div className="input-container">
-            <input
-              type="text"
-              className="input"
-              placeholder="Type your message..."
-              onKeyPress={(e) => {
-                if (e.key === "Enter") {
-                  handleSend(e.target.value);
-                  e.target.value = "";
-                }
-              }}
-            />
-            <button
-              className="send-btn"
-              onClick={() => {
-                const input = document.querySelector(".input");
-                handleSend(input.value);
-                input.value = "";
-              }}
-            >
-              Send
-            </button>
+        {user ? (
+          <div className="chat">
+            <MainContainer>
+              <ChatContainer>
+                <MessageList>
+                  {messages.map((message, i) => (
+                    <div
+                      key={i}
+                      className={`message-container ${
+                        message.sender === "user" ? "user" : "bot"
+                      }`}
+                    >
+                      <Message model={message} />
+                    </div>
+                  ))}
+                  {typing && (
+                    <TypingIndicator content="Tookit AI is typing..." />
+                  )}
+                  <div ref={messageEndRef}></div>
+                </MessageList>
+              </ChatContainer>
+            </MainContainer>
+            <div className="input-container">
+              <input
+                type="text"
+                className="input"
+                placeholder="Type your message..."
+                onKeyPress={(e) => {
+                  if (e.key === "Enter") {
+                    handleSend(e.target.value);
+                    e.target.value = "";
+                  }
+                }}
+              />
+              <button
+                className="send-btn"
+                onClick={() => {
+                  const input = document.querySelector(".input");
+                  handleSend(input.value);
+                  input.value = "";
+                }}
+              >
+                Send
+              </button>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="login-message">
+            <p>Please sign in to access content generation.</p>
+          </div>
+        )}
       </div>
     </div>
   );
