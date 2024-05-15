@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 // import Resume from "./components/Resume/ResumeNew";
 import Projects from "./components/Projects/Projects";
 import Tools from "../src/components/Tools/Projects";
-import ContentGeneration from "./components/ContentGeneration/ContentGen";
+import ContentGeneration from "./components/ContentGeneration1/ContentGen";
 import TextToImage from "./components/TextToImage/TextToImage";
 import TextToSpeech from "./components/TextToSpeech/text-to-speech";
 import SpeechToText from "./components/SpeechToText/speech-to-text";
