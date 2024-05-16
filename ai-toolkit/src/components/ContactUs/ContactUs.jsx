@@ -4,9 +4,10 @@ import ContactForm from "./components/ContactForm/ContactForm";
 import ContactHeader from "./components/ContactHeader/ContactHeader";
 //import Navigation from "./components/Navigation/Navigation";
 
-function App() {
+function ContactUs
+() {
   return (
-    <div className="container">
+    <div className="container-contactus">
       {/* <Navigation /> */}
       <ContactHeader />
       <ContactForm />
@@ -14,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default ContactUs;

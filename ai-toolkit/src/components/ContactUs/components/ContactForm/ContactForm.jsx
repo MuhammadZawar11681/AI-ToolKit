@@ -4,7 +4,7 @@ import { HiMail } from "react-icons/hi";
 import Button from "../Button/Button";
 import styles from "./ContactForm.module.css";
 import { useState } from "react";
-//import image2 from "../ContactForm/" 
+//import image2 from "../ContactForm/"
 const ContactForm = () => {
   const [name, setName] = useState(undefined);
   const [email, setEmail] = useState(undefined);
@@ -61,7 +61,7 @@ const ContactForm = () => {
         </form>
       </div>
       <div className={styles.contact_image}>
-        <img src="/" alt="image of " />
+        <img src="./image2.jpg" alt="Contact form illustration" />
       </div>
     </section>
   );

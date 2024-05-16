@@ -50,7 +50,7 @@
   border: 5px solid white;
 }
  */
- .speech-to-text-container {
+.speech-to-text-container {
   display: flex;
   justify-content: center;
   margin-top: 50px;
@@ -62,8 +62,10 @@
   background-color: #f8f9fa;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px; /* Add padding for spacing inside the card */
+  padding: 10px; /* Add padding for spacing inside the card */
+  height: 400px; /* Adjust the height value as needed */
 }
+
 
 .card-title {
   text-align: center;
@@ -82,6 +84,12 @@
   display: flex;
   flex-direction: column;
 }
+.right-section {
+  width: 60%;
+  
+  padding-left: 20px;
+  flex-direction: column;
+}
 
 .text-box {
   flex: 1;
@@ -90,37 +98,49 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: auto;
+  
 }
 
 .transcript-text {
   margin: 0;
 }
 
-.button-container {
+.button-speech-to-text {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
 }
 
-.btn {
+.btn-start,
+.btn-stop,
+.btn-clear,
+.btn-copy {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: #204a76;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.btn-start:hover {
+  background-color: #0056b3;
+}
+.btn-stop:hover {
+  background-color: #0056b3;
+}
+.btn-clear:hover {
+  background-color: #0056b3;
+}
+.btn-copy:hover {
   background-color: #0056b3;
 }
 
-.right-section {
-  width: 35%;
-  padding-left: 20px;
+.btn-start:hover {
+  background-color: #0056b3;
 }
 
 .file-upload-container {
