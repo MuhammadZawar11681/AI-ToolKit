@@ -9,6 +9,7 @@ import {
 import "./content.css";
 import logo from "../ContentGeneration1/logo3.png";
 import { useUser } from "../UserContext";
+//import Particle from "../Particle";
 
 const API_KEY = process.env.REACT_APP_OPENAI_API;
 
