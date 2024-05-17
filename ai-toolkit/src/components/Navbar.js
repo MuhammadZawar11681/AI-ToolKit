@@ -75,6 +75,7 @@ function NavBar() {
             </Nav.Item>
 
             {/* Tools dropdown */}
+            <Nav.Item>
             <NavDropdown
               title={
                 <span>
@@ -131,6 +132,7 @@ function NavBar() {
                 More...
               </NavDropdown.Item>
             </NavDropdown>
+            </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
