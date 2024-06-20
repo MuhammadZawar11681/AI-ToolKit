@@ -1,10 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.svg";
+//import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 import HomeFooter from "../HomeFooter/HomeFooter";
+import ImageSlider from "../imageSlider";
 
 function Home() {
   return (
@@ -31,18 +32,20 @@ function Home() {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
+              {/* <img
                 src={homeLogo}
                 alt="home pic"
                 className="img-fluid"
                 style={{ maxHeight: "450px" }}
-              />
+              /> */}
+               <ImageSlider />
             </Col>
           </Row>
         </Container>
       </Container>
+     
       <Home2 />
-      <HomeFooter/>
+      <HomeFooter />
     </section>
   );
 }
