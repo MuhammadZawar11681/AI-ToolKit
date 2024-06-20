@@ -170,7 +170,8 @@ function Signup() {
               className="form-control rounded-0"
               onChange={handleImageChange}
             />
-            {image && <img src={image} alt="Uploaded" width={50} height={50} />}
+            {/* i commit it because the image show so big. */}
+            {/* {image && <img src={image} alt="Uploaded" width={10} height={10} />} */}
             {imageError && <div className="text-danger">{imageError}</div>}
           </div>
           <button type="submit" className="btn btn-success w-100 rounded-0">
