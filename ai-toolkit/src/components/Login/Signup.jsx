@@ -100,7 +100,10 @@ function Signup() {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
+    <div
+      className="d-flex justify-content-center align-items-center vh-auto"
+      style={{ paddingTop: "100px", paddingBottom: "20px" }}
+    >
       <div className="bg-white p-3 rounded w-25">
         <h2>Register</h2>
         <form onSubmit={handleSubmit}>
@@ -171,7 +174,7 @@ function Signup() {
               onChange={handleImageChange}
             />
 
-            {image && <img src={image} alt="Uploaded" width={10} height={10} />}
+            {image && <img src={image} alt="Uploaded" width={50} height={50} />}
             {imageError && <div className="text-danger">{imageError}</div>}
           </div>
           <button type="submit" className="btn btn-success w-100 rounded-0">
