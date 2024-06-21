@@ -8,13 +8,14 @@ import Footer from "./components/Footer";
 // import Resume from "./components/Resume/ResumeNew";
 import Projects from "./components/Projects/Projects";
 import Tools from "../src/components/Tools/Projects";
-import ContentGeneration from "./components/ContentGeneration/ContentGen";
+import ContentGeneration from "./components/ContentGeneration1/ContentGen";
 import TextToImage from "./components/TextToImage/TextToImage";
 import TextToSpeech from "./components/TextToSpeech/text-to-speech";
 import SpeechToText from "./components/SpeechToText/speech-to-text";
 import TextToVideo from "./components/TextToVideo/TextToVideo";
 import Signup from "./components/Login/Signup";
 import Signin from "./components/Login/Signin";
+import ContactUs from "./components/ContactUs/Contact"
 
 import {
   BrowserRouter as Router,
@@ -56,6 +57,7 @@ function App() {
             <Route path="/TextToSpeech" element={<TextToSpeech />} />
             <Route path="/SpeechToText" element={<SpeechToText />} />
             <Route path="/TextToVideo" element={<TextToVideo />} />
+            <Route path="/contact" element={<ContactUs />} />
             <Route path="*" element={<Navigate to="/" />} />
             <Route path="/Signup" element={<Signup />} />
             <Route path="/Signin" element={<Signin />} />

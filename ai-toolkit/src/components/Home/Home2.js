@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import Tilt from "react-parallax-tilt";
 import aboutimg from "../../Assets/aboutimage.png";
 import Tools from "../Tools/Projects";
+//import ImageSlider from "../imageSlider";
+
 
 function Home2() {
   return (
@@ -95,6 +97,8 @@ function Home2() {
         </Row> */}
       </Container>
       <Tools />
+      
+      
     </Container>
   );
 }

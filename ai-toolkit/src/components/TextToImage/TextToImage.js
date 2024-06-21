@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Aboutcard from "./ImageCard";
 
-
 function About() {
   return (
     <Container fluid className="about-section">
@@ -23,15 +22,12 @@ function About() {
             </h1>
             <Aboutcard />
           </Col>
-
         </Row>
 
-
         <br />
         <br />
-
-
-
+        <br />
+        <br />
       </Container>
     </Container>
   );
