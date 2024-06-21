@@ -154,7 +154,9 @@
 // export default SpeechToTextCard;
 
 import React, { useState, useRef, useEffect } from "react";
-import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
 import useClipboard from "react-use-clipboard";
 import Card from "react-bootstrap/Card";
 import axios from "axios";
@@ -185,12 +187,16 @@ const SpeechToTextCard = () => {
       formData.append("file", file);
 
       try {
-        const res = await axios.post("https://api.openai.com/v1/audio/transcriptions", formData, {
-          headers: {
-            "content-type": "multipart/form-data",
-            Authorization: `Bearer ${KEY}`,
-          },
-        });
+        const res = await axios.post(
+          "https://api.openai.com/v1/audio/transcriptions",
+          formData,
+          {
+            headers: {
+              "content-type": "multipart/form-data",
+              Authorization: `Bearer ${KEY}`,
+            },
+          }
+        );
         setResponse(res.data);
       } catch (err) {
         console.log(err);
@@ -203,23 +209,31 @@ const SpeechToTextCard = () => {
     <div className="speech-to-text-container">
       <Card className="speech-card">
         <Card.Body>
-          <h1 className="card-title">Convert Speech To Text With AI</h1>
+          {/* <h1 className="card-title">Convert Speech To Text With AI</h1> */}
           <div className="content-wrapper">
             <div className="left-section">
               <div className="text-box">
                 <p className="transcript-text">{transcript}</p>
               </div>
-              <div className="button-container">
-                <button className="btn" onClick={() => SpeechRecognition.startListening({ continuous: true })}>
+              <div className="button-speech-to-text">
+                <button
+                  className="btn-start"
+                  onClick={() =>
+                    SpeechRecognition.startListening({ continuous: true })
+                  }
+                >
                   Start Listening
                 </button>
-                <button className="btn" onClick={() => SpeechRecognition.stopListening()}>
+                <button
+                  className="btn-stop"
+                  onClick={() => SpeechRecognition.stopListening()}
+                >
                   Stop Listening
                 </button>
-                <button className="btn" onClick={resetTranscript}>
+                <button className="btn-clear" onClick={resetTranscript}>
                   Clear Text
                 </button>
-                <button className="btn" onClick={setCopied}>
+                <button className="btn-copy" onClick={setCopied}>
                   {isCopied ? "Copied! 👍" : "Copy?"}
                 </button>
               </div>
@@ -227,7 +241,12 @@ const SpeechToTextCard = () => {
             <div className="right-section">
               <div className="file-upload-container">
                 <h3>Upload an MP3 file to convert it to text:</h3>
-                <input type="file" ref={inputRef} accept=".mp3" onChange={onChangeFile} />
+                <input
+                  type="file"
+                  ref={inputRef}
+                  accept=".mp3"
+                  onChange={onChangeFile}
+                />
                 {response && <pre>{JSON.stringify(response, null, 2)}</pre>}
               </div>
             </div>

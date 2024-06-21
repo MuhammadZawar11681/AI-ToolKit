@@ -9,5 +9,3 @@ const EmployeeSchema = new mongoose.Schema({
 
 const EmployeeModel = mongoose.model("AI_ToolKit", EmployeeSchema);
 module.exports = EmployeeModel;
-
-
