@@ -104,7 +104,7 @@ button {
   display: none;
 }
 
-.submit-button {
+.imageG2-submit-button {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   background-color: #121212;
@@ -115,11 +115,11 @@ button {
   transition: background-color 0.3s;
 }
 
-.submit-button:hover {
+.imageG2-submit-button:hover {
   background-color: #121212;
 }
 
-.submit-button:disabled {
+.imageG2-submit-button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
 }

@@ -271,7 +271,7 @@ function App() {
             </>
           )}
 
-          <button type="submit" className="submit-button" disabled={isLoading}>
+          <button type="submit" className="imageG2-submit-button" disabled={isLoading}>
             {isLoading ? "Generating..." : "Generate"}
           </button>
         </form>
