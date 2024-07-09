@@ -41,33 +41,38 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <UserProvider>
-          <Navbar />
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/Projects" element={<Projects />} />
-            <Route path="/project" element={<Tools />} />
-            <Route path="/project" element={<Tools />} />
-            <Route path="/ContentGeneration" element={<ContentGeneration />} />
-            <Route path="/TextToImage" element={<TextToImage />} />
-            <Route path="/TextToImage2" element={<TextToImage2 />} />
-            <Route path="/TextToSpeech" element={<TextToSpeech />} />
-            <Route path="/SpeechToText" element={<SpeechToText />} />
-            <Route path="/TextToVideo" element={<TextToVideo />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="*" element={<Navigate to="/" />} />
-            <Route path="/Signup" element={<Signup />} />
-            <Route path="/Signin" element={<Signin />} />
-          </Routes>
-        </UserProvider>
-        <Footer />
-      </div>
-    </Router>
+    <UserProvider>
+      <Router>
+        <Preloader load={load} />
+        <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <UserProvider>
+            <Navbar />
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/Projects" element={<Projects />} />
+              <Route path="/project" element={<Tools />} />
+              <Route path="/project" element={<Tools />} />
+              <Route
+                path="/ContentGeneration"
+                element={<ContentGeneration />}
+              />
+              <Route path="/TextToImage" element={<TextToImage />} />
+              <Route path="/TextToImage2" element={<TextToImage2 />} />
+              <Route path="/TextToSpeech" element={<TextToSpeech />} />
+              <Route path="/SpeechToText" element={<SpeechToText />} />
+              <Route path="/TextToVideo" element={<TextToVideo />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="*" element={<Navigate to="/" />} />
+              <Route path="/Signup" element={<Signup />} />
+              <Route path="/Signin" element={<Signin />} />
+            </Routes>
+          </UserProvider>
+          <Footer />
+        </div>
+      </Router>
+    </UserProvider>
   );
 }
 
