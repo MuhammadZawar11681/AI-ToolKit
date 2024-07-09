@@ -76,62 +76,69 @@ function NavBar() {
 
             {/* Tools dropdown */}
             <Nav.Item>
-            <NavDropdown
-              title={
-                <span>
-                  <AiOutlineFundProjectionScreen
-                    style={{ marginBottom: "2px" }}
-                  />{" "}
-                  Tools
-                </span>
-              }
-              id="basic-nav-dropdown"
-            >
-              <NavDropdown.Item
-                as={Link}
-                to="/ContentGeneration"
-                onClick={() => updateExpanded(false)}
+              <NavDropdown
+                title={
+                  <span>
+                    <AiOutlineFundProjectionScreen
+                      style={{ marginBottom: "2px" }}
+                    />{" "}
+                    Tools
+                  </span>
+                }
+                id="basic-nav-dropdown"
               >
-                Content Generation
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                as={Link}
-                to="/TextToImage"
-                onClick={() => updateExpanded(false)}
-              >
-                Text To Image
-              </NavDropdown.Item>
-              {/* changes by yushaa */}
+                <NavDropdown.Item
+                  as={Link}
+                  to="/ContentGeneration"
+                  onClick={() => updateExpanded(false)}
+                >
+                  Content Generation
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={Link}
+                  to="/TextToImage"
+                  onClick={() => updateExpanded(false)}
+                >
+                  Text To Image
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={Link}
+                  to="/TextToImage2"
+                  onClick={() => updateExpanded(false)}
+                >
+                  Text To Image 2
+                </NavDropdown.Item>
+                {/* changes by yushaa */}
 
-              <NavDropdown.Item
-                as={Link}
-                to="/TextToSpeech"
-                onClick={() => updateExpanded(false)}
-              >
-                Text To Speech
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                as={Link}
-                to="/SpeechToText"
-                onClick={() => updateExpanded(false)}
-              >
-                Speech To Text
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                as={Link}
-                to="/TextToVideo"
-                onClick={() => updateExpanded(false)}
-              >
-                Text To Video
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                as={Link}
-                to="/project"
-                onClick={() => updateExpanded(false)}
-              >
-                More...
-              </NavDropdown.Item>
-            </NavDropdown>
+                <NavDropdown.Item
+                  as={Link}
+                  to="/TextToSpeech"
+                  onClick={() => updateExpanded(false)}
+                >
+                  Text To Speech
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={Link}
+                  to="/SpeechToText"
+                  onClick={() => updateExpanded(false)}
+                >
+                  Speech To Text
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={Link}
+                  to="/TextToVideo"
+                  onClick={() => updateExpanded(false)}
+                >
+                  Text To Video
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={Link}
+                  to="/project"
+                  onClick={() => updateExpanded(false)}
+                >
+                  More...
+                </NavDropdown.Item>
+              </NavDropdown>
             </Nav.Item>
 
             <Nav.Item>

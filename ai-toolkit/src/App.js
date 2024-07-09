@@ -10,12 +10,13 @@ import Projects from "./components/Projects/Projects";
 import Tools from "../src/components/Tools/Projects";
 import ContentGeneration from "./components/ContentGeneration1/ContentGen";
 import TextToImage from "./components/TextToImage/TextToImage";
+import TextToImage2 from "./components/TextToImage2/imageG2";
 import TextToSpeech from "./components/TextToSpeech/text-to-speech";
 import SpeechToText from "./components/SpeechToText/speech-to-text";
 import TextToVideo from "./components/TextToVideo/TextToVideo";
 import Signup from "./components/Login/Signup";
 import Signin from "./components/Login/Signin";
-import ContactUs from "./components/ContactUs/Contact"
+import ContactUs from "./components/ContactUs/Contact";
 
 import {
   BrowserRouter as Router,
@@ -54,6 +55,7 @@ function App() {
             <Route path="/project" element={<Tools />} />
             <Route path="/ContentGeneration" element={<ContentGeneration />} />
             <Route path="/TextToImage" element={<TextToImage />} />
+            <Route path="/TextToImage2" element={<TextToImage2 />} />
             <Route path="/TextToSpeech" element={<TextToSpeech />} />
             <Route path="/SpeechToText" element={<SpeechToText />} />
             <Route path="/TextToVideo" element={<TextToVideo />} />
