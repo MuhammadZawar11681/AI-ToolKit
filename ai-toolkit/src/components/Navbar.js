@@ -36,164 +36,164 @@
 //   window.addEventListener("scroll", scrollHandler);
 
 //   return (
-//     <Navbar
-//       expanded={expand}
-//       fixed="top"
-//       expand="md"
-//       className={navColour ? "sticky" : "navbar"}
-//     >
-//       <Container>
-//         <Navbar.Brand href="/" className="d-flex">
-//           <img src={logo3} className="img-fluid logo" alt="brand" />
-//         </Navbar.Brand>
-//         <Navbar.Toggle
-//           aria-controls="responsive-navbar-nav"
-//           onClick={() => {
-//             updateExpanded(expand ? false : "expanded");
-//           }}
-//         >
-//           <span></span>
-//           <span></span>
-//           <span></span>
-//         </Navbar.Toggle>
-//         <Navbar.Collapse id="responsive-navbar-nav">
-//           <Nav className="mx-auto">
-//             <Nav.Item>
-//               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-//                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
-//               </Nav.Link>
-//             </Nav.Item>
+    // <Navbar
+    //   expanded={expand}
+    //   fixed="top"
+    //   expand="md"
+    //   className={navColour ? "sticky" : "navbar"}
+    // >
+    //   <Container>
+    //     <Navbar.Brand href="/" className="d-flex">
+    //       <img src={logo3} className="img-fluid logo" alt="brand" />
+    //     </Navbar.Brand>
+    //     <Navbar.Toggle
+    //       aria-controls="responsive-navbar-nav"
+    //       onClick={() => {
+    //         updateExpanded(expand ? false : "expanded");
+    //       }}
+    //     >
+    //       <span></span>
+    //       <span></span>
+    //       <span></span>
+    //     </Navbar.Toggle>
+    //     <Navbar.Collapse id="responsive-navbar-nav">
+    //       <Nav className="mx-auto">
+    //         <Nav.Item>
+    //           <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+    //             <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+    //           </Nav.Link>
+    //         </Nav.Item>
 
-//             <Nav.Item>
-//               <Nav.Link
-//                 as={Link}
-//                 to="/about"
-//                 onClick={() => updateExpanded(false)}
-//               >
-//                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
-//               </Nav.Link>
-//             </Nav.Item>
+    //         <Nav.Item>
+    //           <Nav.Link
+    //             as={Link}
+    //             to="/about"
+    //             onClick={() => updateExpanded(false)}
+    //           >
+    //             <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+    //           </Nav.Link>
+    //         </Nav.Item>
 
-//             {/* Tools dropdown */}
-//             <Nav.Item>
-//               <NavDropdown
-//                 title={
-//                   <span>
-//                     <AiOutlineFundProjectionScreen
-//                       style={{ marginBottom: "2px" }}
-//                     />{" "}
-//                     Tools
-//                   </span>
-//                 }
-//                 id="basic-nav-dropdown"
-//               >
-//                 <NavDropdown.Item
-//                   as={Link}
-//                   to="/ContentGeneration"
-//                   onClick={() => updateExpanded(false)}
-//                 >
-//                   Content Generation
-//                 </NavDropdown.Item>
-//                 <NavDropdown.Item
-//                   as={Link}
-//                   to="/TextToImage"
-//                   onClick={() => updateExpanded(false)}
-//                 >
-//                   Text To Image
-//                 </NavDropdown.Item>
-//                 <NavDropdown.Item
-//                   as={Link}
-//                   to="/TextToImage2"
-//                   onClick={() => updateExpanded(false)}
-//                 >
-//                   Text To Image 2
-//                 </NavDropdown.Item>
-//                 {/* changes by yushaa */}
+    //         {/* Tools dropdown */}
+    //         <Nav.Item>
+    //           <NavDropdown
+    //             title={
+    //               <span>
+    //                 <AiOutlineFundProjectionScreen
+    //                   style={{ marginBottom: "2px" }}
+    //                 />{" "}
+    //                 Tools
+    //               </span>
+    //             }
+    //             id="basic-nav-dropdown"
+    //           >
+    //             <NavDropdown.Item
+    //               as={Link}
+    //               to="/ContentGeneration"
+    //               onClick={() => updateExpanded(false)}
+    //             >
+    //               Content Generation
+    //             </NavDropdown.Item>
+    //             <NavDropdown.Item
+    //               as={Link}
+    //               to="/TextToImage"
+    //               onClick={() => updateExpanded(false)}
+    //             >
+    //               Text To Image
+    //             </NavDropdown.Item>
+    //             <NavDropdown.Item
+    //               as={Link}
+    //               to="/TextToImage2"
+    //               onClick={() => updateExpanded(false)}
+    //             >
+    //               Text To Image 2
+    //             </NavDropdown.Item>
+    //             {/* changes by yushaa */}
 
-//                 <NavDropdown.Item
-//                   as={Link}
-//                   to="/TextToSpeech"
-//                   onClick={() => updateExpanded(false)}
-//                 >
-//                   Text To Speech
-//                 </NavDropdown.Item>
-//                 <NavDropdown.Item
-//                   as={Link}
-//                   to="/SpeechToText"
-//                   onClick={() => updateExpanded(false)}
-//                 >
-//                   Speech To Text
-//                 </NavDropdown.Item>
-//                 <NavDropdown.Item
-//                   as={Link}
-//                   to="/TextToVideo"
-//                   onClick={() => updateExpanded(false)}
-//                 >
-//                   Text To Video
-//                 </NavDropdown.Item>
-//                 <NavDropdown.Item
-//                   as={Link}
-//                   to="/project"
-//                   onClick={() => updateExpanded(false)}
-//                 >
-//                   More...
-//                 </NavDropdown.Item>
-//               </NavDropdown>
-//             </Nav.Item>
+    //             <NavDropdown.Item
+    //               as={Link}
+    //               to="/TextToSpeech"
+    //               onClick={() => updateExpanded(false)}
+    //             >
+    //               Text To Speech
+    //             </NavDropdown.Item>
+    //             <NavDropdown.Item
+    //               as={Link}
+    //               to="/SpeechToText"
+    //               onClick={() => updateExpanded(false)}
+    //             >
+    //               Speech To Text
+    //             </NavDropdown.Item>
+    //             <NavDropdown.Item
+    //               as={Link}
+    //               to="/TextToVideo"
+    //               onClick={() => updateExpanded(false)}
+    //             >
+    //               Text To Video
+    //             </NavDropdown.Item>
+    //             <NavDropdown.Item
+    //               as={Link}
+    //               to="/project"
+    //               onClick={() => updateExpanded(false)}
+    //             >
+    //               More...
+    //             </NavDropdown.Item>
+    //           </NavDropdown>
+    //         </Nav.Item>
 
-//             <Nav.Item>
-//               <Nav.Link
-//                 as={Link}
-//                 to="/contact"
-//                 onClick={() => updateExpanded(false)}
-//               >
-//                 <CgFileDocument style={{ marginBottom: "2px" }} /> Contact Us
-//               </Nav.Link>
-//             </Nav.Item>
-//           </Nav>
+    //         <Nav.Item>
+    //           <Nav.Link
+    //             as={Link}
+    //             to="/contact"
+    //             onClick={() => updateExpanded(false)}
+    //           >
+    //             <CgFileDocument style={{ marginBottom: "2px" }} /> Contact Us
+    //           </Nav.Link>
+    //         </Nav.Item>
+    //       </Nav>
 
-//           {/* Login on the right */}
-//           <Nav>
-//             {user ? (
-//               <NavDropdown
-//                 title={
-//                   <div className="d-flex align-items-center">
-//                     <p style={{ marginRight: "10px", marginBottom: "0" }}>
-//                       Hello, {user.name}
-//                     </p>
-//                     <img
-//                       src={user.imageUrl}
-//                       alt="User"
-//                       style={{
-//                         width: "30px",
-//                         height: "30px",
-//                         borderRadius: "50%",
-//                         objectFit: "cover",
-//                       }}
-//                     />
-//                   </div>
-//                 }
-//                 id="basic-nav-dropdown"
-//               >
-//                 <NavDropdown.Item onClick={handleSignOut}>
-//                   Logout
-//                 </NavDropdown.Item>
-//               </NavDropdown>
-//             ) : (
-//               <Nav.Item>
-//                 <Nav.Link
-//                   as={Link}
-//                   to="/Signin"
-//                   onClick={() => updateExpanded(false)}
-//                 >
-//                   Guest <AiOutlineUser style={{ marginBottom: "2px" }} />
-//                 </Nav.Link>
-//               </Nav.Item>
-//             )}
-//           </Nav>
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
+    //       {/* Login on the right */}
+    //       <Nav>
+    //         {user ? (
+    //           <NavDropdown
+    //             title={
+    //               <div className="d-flex align-items-center">
+    //                 <p style={{ marginRight: "10px", marginBottom: "0" }}>
+    //                   Hello, {user.name}
+    //                 </p>
+    //                 <img
+    //                   src={user.imageUrl}
+    //                   alt="User"
+    //                   style={{
+    //                     width: "30px",
+    //                     height: "30px",
+    //                     borderRadius: "50%",
+    //                     objectFit: "cover",
+    //                   }}
+    //                 />
+    //               </div>
+    //             }
+    //             id="basic-nav-dropdown"
+    //           >
+    //             <NavDropdown.Item onClick={handleSignOut}>
+    //               Logout
+    //             </NavDropdown.Item>
+    //           </NavDropdown>
+    //         ) : (
+    //           <Nav.Item>
+    //             <Nav.Link
+    //               as={Link}
+    //               to="/Signin"
+    //               onClick={() => updateExpanded(false)}
+    //             >
+    //               Guest <AiOutlineUser style={{ marginBottom: "2px" }} />
+    //             </Nav.Link>
+    //           </Nav.Item>
+    //         )}
+    //       </Nav>
+    //     </Navbar.Collapse>
+    //   </Container>
+    // </Navbar>
 //   );
 // }
 
@@ -391,7 +391,7 @@ function NavBar() {
                   to="/Signin"
                   onClick={() => updateExpanded(false)}
                 >
-                  Login
+                  Guest <AiOutlineUser style={{ marginBottom: "2px" }} />
                 </Nav.Link>
               </Nav.Item>
             )}
