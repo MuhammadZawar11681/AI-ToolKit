@@ -5,8 +5,7 @@ import { UserProvider } from "./components/UserContext";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Footer from "./components/Footer";
-// import Resume from "./components/Resume/ResumeNew";
-import Projects from "./components/Projects/Projects";
+import Projects from "../src/components/Projects/Projects";
 import Tools from "../src/components/Tools/Projects";
 import ContentGeneration from "./components/ContentGeneration1/ContentGen";
 import TextToImage from "./components/TextToImage/TextToImage";
@@ -17,6 +16,7 @@ import TextToVideo from "./components/TextToVideo/TextToVideo";
 import Signup from "./components/Login/Signup";
 import Signin from "./components/Login/Signin";
 import ContactUs from "./components/ContactUs/Contact";
+// import Resume from "./components/Resume/ResumeNew";
 
 import {
   BrowserRouter as Router,
@@ -52,8 +52,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/Projects" element={<Projects />} />
-              <Route path="/project" element={<Tools />} />
-              <Route path="/project" element={<Tools />} />
+              <Route path="/tools" element={<Tools />} />
               <Route
                 path="/ContentGeneration"
                 element={<ContentGeneration />}
