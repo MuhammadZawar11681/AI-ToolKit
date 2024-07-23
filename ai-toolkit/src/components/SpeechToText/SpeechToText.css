@@ -58,6 +58,7 @@
 
 .speech-card {
   width: 200%; /* Adjust width percentage as needed */
+  height: 200%;
   max-width: 1000px; /* Set a maximum width if necessary */
   background-color: #f8f9fa;
   border-radius: 10px;
@@ -65,7 +66,6 @@
   padding: 10px; /* Add padding for spacing inside the card */
   height: 400px; /* Adjust the height value as needed */
 }
-
 
 .card-title {
   text-align: center;
@@ -86,7 +86,7 @@
 }
 .right-section {
   width: 60%;
-  
+
   padding-left: 20px;
   flex-direction: column;
 }
@@ -98,7 +98,6 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: auto;
-  
 }
 
 .transcript-text {
