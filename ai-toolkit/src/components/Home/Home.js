@@ -38,12 +38,11 @@ function Home() {
                 className="img-fluid"
                 style={{ maxHeight: "450px" }}
               /> */}
-               <ImageSlider />
+              <ImageSlider />
             </Col>
           </Row>
         </Container>
       </Container>
-     
       <Home2 />
       <HomeFooter />
     </section>

@@ -70,12 +70,12 @@ const TextToVideoCard = () => {
             </h1>
 
             <div className=" rounded-md shadow-xl p-5 max-w-lg w-full">
-              <div>
+              {/* <div>
                 <h3 className=" text-2xl font-bold">Video Generation</h3>
                 <p className=" text-slate-500 text-sm mt-2">
                   Generate next level video with prompt.
                 </p>
-              </div>
+              </div> */}
               <div className="h-[300px] w-full rounded-md border-2 border-dashed my-5 flex flex-col items-center justify-center">
                 {loading ? (
                   <Hourglass

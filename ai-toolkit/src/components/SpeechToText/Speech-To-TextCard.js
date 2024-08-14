@@ -208,6 +208,9 @@ const SpeechToTextCard = () => {
   return (
     <div className="speech-to-text-container">
       <Card className="speech-card">
+        <h5 className="mb-4">
+          Real Time <span className="purple">Conversation</span>
+        </h5>
         <Card.Body>
           {/* <h1 className="card-title">Convert Speech To Text With AI</h1> */}
           <div className="content-wrapper">
