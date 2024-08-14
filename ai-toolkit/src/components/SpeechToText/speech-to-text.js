@@ -60,8 +60,8 @@ function SpeechToText() {
             </h1>
             <h5 className="mb-4">
               Convert Speech To Text With <span className="purple">AI</span>
-              <SpeechToTextCard />
             </h5>
+            <SpeechToTextCard />
           </Col>
         </Row>
 

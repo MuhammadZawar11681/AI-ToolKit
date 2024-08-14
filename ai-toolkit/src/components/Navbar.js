@@ -341,7 +341,7 @@ function NavBar() {
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   as={Link}
-                  to="/project"
+                  to="/Projects"
                   onClick={() => updateExpanded(false)}
                 >
                   More...
