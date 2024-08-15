@@ -23,7 +23,7 @@ function Footer() {
           <ul className="footer-icons">
             <li className="social-icons">
               <a
-                href=" "
+                href="https://github.com/MuhammadZawar11681https://github.com/MuhammadZawar11681/AI-ToolKit.git"
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -43,7 +43,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href=" "
+                href="https://www.linkedin.com/in/m-zawar/"
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -53,7 +53,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href=" "
+                href="https://www.instagram.com/zawar.mohammad/"
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
