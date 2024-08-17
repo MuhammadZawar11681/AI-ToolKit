@@ -16,6 +16,7 @@ import TextToVideo from "./components/TextToVideo/TextToVideo";
 import Signup from "./components/Login/Signup";
 import Signin from "./components/Login/Signin";
 import ContactUs from "./components/ContactUs/Contact";
+import Admin from "./components/Admin/admin";
 // import Resume from "./components/Resume/ResumeNew";
 
 import {
@@ -50,6 +51,7 @@ function App() {
             <ScrollToTop />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="admin" element={<Admin />} />
               <Route path="/about" element={<About />} />
               <Route path="/Projects" element={<Projects />} />
               <Route path="/tools" element={<Tools />} />

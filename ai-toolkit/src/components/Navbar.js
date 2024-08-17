@@ -138,6 +138,13 @@ function NavBar() {
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   as={Link}
+                  to="/admin"
+                  onClick={() => updateExpanded(false)}
+                >
+                  Admin
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={Link}
                   to="/Projects"
                   onClick={() => updateExpanded(false)}
                 >

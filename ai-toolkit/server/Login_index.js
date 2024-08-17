@@ -95,6 +95,40 @@ app.post("/api/video-gen", async (req, res) => {
   }
 });
 
+// Fetch all users
+app.get("/admin/users", async (req, res) => {
+  try {
+    const users = await EmployeeModel.find({});
+    res.json(users);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Update user
+app.put("/admin/users/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedUser = await EmployeeModel.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    res.json(updatedUser);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Delete user
+app.delete("/admin/users/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    await EmployeeModel.findByIdAndDelete(id);
+    res.json({ message: "User deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 const PORT = 3001; // Define the port to listen on
 
 app.listen(PORT, () => {
