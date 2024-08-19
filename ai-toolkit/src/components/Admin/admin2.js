@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Admin = () => {
+const Admin2 = () => {
   const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -62,16 +62,28 @@ const Admin = () => {
       <table border="1">
         <thead>
           <tr>
+            <th>Picture</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Password</th> {/* Add Password Header */}
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           {filteredUsers.map((user) => (
             <tr key={user._id}>
+              <td>
+                <img
+                  src={user.image || "default-image-url.png"} // Use a default image URL if no image is available
+                  alt={`${user.name}'s profile`}
+                  width="50"
+                  height="50"
+                  style={{ borderRadius: "50%" }}
+                />
+              </td>
               <td>{user.name}</td>
               <td>{user.email}</td>
+              <td>{user.password}</td> {/* Display Password */}
               <td>
                 <button onClick={() => handleUpdate(user._id)}>Update</button>
                 <button onClick={() => handleDelete(user._id)}>Delete</button>
@@ -84,4 +96,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Admin2;
