@@ -1,0 +1,27 @@
+/* Add this in your main CSS file */
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+}
+
+.main-content {
+  margin-left: 200px;
+  padding: 20px;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
