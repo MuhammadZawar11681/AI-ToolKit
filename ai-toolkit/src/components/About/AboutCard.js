@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
-import Admin from "../Admin/admin";
 
 function AboutCard() {
   return (
@@ -41,7 +40,6 @@ function AboutCard() {
               <ImPointRight /> Text To Video
             </li>
           </ul>
-          <Admin />
 
           {/* <footer className="blockquote-footer">NULL</footer> */}
         </blockquote>

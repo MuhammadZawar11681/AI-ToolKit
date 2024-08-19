@@ -16,7 +16,7 @@ import TextToVideo from "./components/TextToVideo/TextToVideo";
 import Signup from "./components/Login/Signup";
 import Signin from "./components/Login/Signin";
 import ContactUs from "./components/ContactUs/Contact";
-import Admin from "./components/Admin/admin";
+import Admin from "./components/Admin/Admin1";
 // import Resume from "./components/Resume/ResumeNew";
 
 import {

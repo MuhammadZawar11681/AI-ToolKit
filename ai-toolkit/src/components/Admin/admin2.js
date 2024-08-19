@@ -53,7 +53,6 @@ const Admin = () => {
 
   return (
     <div className="Admin" style={{ backgroundColor: "black" }}>
-      <h1>Admin Panel</h1>
       <input
         type="text"
         placeholder="Search by name or email"
