@@ -129,6 +129,24 @@ app.delete("/admin/users/:id", async (req, res) => {
   }
 });
 
+// User Status Show.
+
+app.get("/admin/metrics", async (req, res) => {
+  try {
+    const totalUsers = await EmployeeModel.countDocuments({});
+    const activeUsers = await EmployeeModel.countDocuments({
+      lastLogin: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) }, // Users logged in within the last 30 days
+    });
+    const pendingRequests = await EmployeeModel.countDocuments({
+      isActive: false,
+    });
+
+    res.json({ totalUsers, activeUsers, pendingRequests });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 const PORT = 3001; // Define the port to listen on
 
 app.listen(PORT, () => {
