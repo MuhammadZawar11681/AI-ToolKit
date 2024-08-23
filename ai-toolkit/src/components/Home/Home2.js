@@ -5,7 +5,6 @@ import aboutimg from "../../Assets/aboutimage.png";
 import Tools from "../Tools/Projects";
 //import ImageSlider from "../imageSlider";
 
-
 function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
@@ -34,7 +33,6 @@ function Home2() {
                 <b className="purple">Web Technologies </b>based on the{" "}
                 <b className="purple">Artificial Intelligence.</b>
               </i>
-              
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -46,8 +44,6 @@ function Home2() {
         </Row>
       </Container>
       <Tools />
-      
-      
     </Container>
   );
 }
