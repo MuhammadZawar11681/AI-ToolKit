@@ -18,6 +18,7 @@ import Signup from "./components/Login/Signup";
 import Signin from "./components/Login/Signin";
 import ContactUs from "./components/ContactUs/Contact";
 import Admin from "./components/Admin/Admin1";
+import LoginPromp from "./components/LoginPrompt/LoginPrompt1"
 import "bootstrap/dist/css/bootstrap.min.css";
 //import './tailwind.css';
 // import Resume from "./components/Resume/ResumeNew";
@@ -72,6 +73,7 @@ function App() {
               <Route path="*" element={<Navigate to="/" />} />
               <Route path="/Signup" element={<Signup />} />
               <Route path="/Signin" element={<Signin />} />
+              <Route path="/LoginPromp" element={<LoginPromp />} />
             </Routes>
           </UserProvider>
           <Footer />

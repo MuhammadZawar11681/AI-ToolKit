@@ -154,6 +154,8 @@
 
 import React, { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
+import LoginPrompt from "../LoginPrompt/LoginPrompt1";
+import { useUser } from "../UserContext";
 import "./imageG2.css";
 
 function App() {
@@ -164,6 +166,7 @@ function App() {
   const [imageURL, setImageURL] = useState("");
   const [revisedPrompt, setRevisedPrompt] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const { user } = useUser();
 
   // Replace with your own OpenAI API key
   const configuration = new Configuration({
@@ -199,6 +202,10 @@ function App() {
       setIsLoading(false);
     }
   };
+
+  if (!user) {
+    return <LoginPrompt />;
+  }
 
   return (
     <div className="imageGenerator2">
