@@ -117,10 +117,17 @@ function NavBar() {
 
                 <NavDropdown.Item
                   as={Link}
-                  to="/TextToSpeech"
+                  to="/TextToSpeech1"
                   onClick={() => updateExpanded(false)}
                 >
-                  Text To Speech
+                  Text To Speech 1
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={Link}
+                  to="/TextToSpeech2"
+                  onClick={() => updateExpanded(false)}
+                >
+                  Text To Speech 2
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   as={Link}
@@ -135,6 +142,13 @@ function NavBar() {
                   onClick={() => updateExpanded(false)}
                 >
                   Text To Video
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={Link}
+                  to="/admin"
+                  onClick={() => updateExpanded(false)}
+                >
+                  Admin
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   as={Link}
