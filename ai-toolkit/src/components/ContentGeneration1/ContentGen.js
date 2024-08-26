@@ -106,7 +106,7 @@ function ContentGen() {
           className="sidebar-btn advanced-gc-btn"
           onClick={openAdvancedGC}
         >
-          Advance GC
+          Advance Content_Generator
         </button>
       </div>
       <div className="chat-container">
