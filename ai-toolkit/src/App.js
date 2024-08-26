@@ -8,14 +8,18 @@ import Footer from "./components/Footer";
 import Projects from "../src/components/Projects/Projects";
 import Tools from "../src/components/Tools/Projects";
 import ContentGeneration from "./components/ContentGeneration1/ContentGen";
-import TextToImage from "./components/TextToImage/TextToImage";
+import TextToImage from "./components/TextToImage1/TextToImage";
 import TextToImage2 from "./components/TextToImage2/imageG2";
-import TextToSpeech from "./components/TextToSpeech/text-to-speech";
+import TextToSpeech1 from "./components/TextToSpeech1/text-to-speech";
+import TextToSpeech2 from "./components/TextToSpeech2/text-to-speech1";
 import SpeechToText from "./components/SpeechToText/speech-to-text";
 import TextToVideo from "./components/TextToVideo/TextToVideo";
 import Signup from "./components/Login/Signup";
 import Signin from "./components/Login/Signin";
 import ContactUs from "./components/ContactUs/Contact";
+import Admin from "./components/Admin/Admin1";
+import "bootstrap/dist/css/bootstrap.min.css";
+//import './tailwind.css';
 // import Resume from "./components/Resume/ResumeNew";
 
 import {
@@ -50,6 +54,7 @@ function App() {
             <ScrollToTop />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="admin" element={<Admin />} />
               <Route path="/about" element={<About />} />
               <Route path="/Projects" element={<Projects />} />
               <Route path="/tools" element={<Tools />} />
@@ -59,7 +64,8 @@ function App() {
               />
               <Route path="/TextToImage" element={<TextToImage />} />
               <Route path="/TextToImage2" element={<TextToImage2 />} />
-              <Route path="/TextToSpeech" element={<TextToSpeech />} />
+              <Route path="/TextToSpeech1" element={<TextToSpeech1 />} />
+              <Route path="/TextToSpeech2" element={<TextToSpeech2 />} />
               <Route path="/SpeechToText" element={<SpeechToText />} />
               <Route path="/TextToVideo" element={<TextToVideo />} />
               <Route path="/contact" element={<ContactUs />} />
