@@ -27,8 +27,7 @@ function Projects() {
               isBlog={false}
               title="Content Generation"
               description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="/ "
-              demoLink="/ "
+              demoLink="/ContentGeneration"
             />
           </Col>
 
@@ -36,10 +35,9 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Content Generation"
+              title="Test to Image"
               description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="/ "
-              demoLink="/ "
+              demoLink="/TextToImage2"
             />
           </Col>
 
@@ -47,10 +45,9 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Content Generation"
+              title="Text to Speech"
               description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="/ "
-              demoLink="/ "
+              demoLink="/TextToSpeech2"
             />
           </Col>
 
@@ -58,10 +55,10 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Content Generation"
+              title="Speech to Text"
               description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="/ "
-              demoLink="/ "
+              // ghLink="/ "
+              demoLink="/SpeechToText"
             />
           </Col>
 
@@ -69,10 +66,10 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Content Generation"
+              title="Text to Video"
               description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="/ "
-              demoLink="/ "
+              // ghLink="/ "
+              demoLink="/TextToVideo"
             />
           </Col>
 
@@ -80,10 +77,10 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Content Generation"
+              title="Admin"
               description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="/ "
-              demoLink="/ "
+              // ghLink="/ "
+              demoLink="/admin"
             />
           </Col>
         </Row>

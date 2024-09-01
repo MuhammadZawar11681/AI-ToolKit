@@ -40,7 +40,7 @@ function Projects() {
               title="Text to speech"
               // description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
               //  ghLink=" "
-              demoLink="/TextToSpeech"
+              demoLink="/TextToSpeech2"
             />
           </Col>
 
@@ -85,7 +85,7 @@ function Projects() {
               // description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
               // Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
               // ghLink=" "
-              demoLink=" " // <--------Please include a demo link here
+              demoLink="/Projects" // <--------Please include a demo link here
             />
           </Col>
         </Row>
