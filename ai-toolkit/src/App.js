@@ -18,8 +18,9 @@ import Signup from "./components/Login/Signup";
 import Signin from "./components/Login/Signin";
 import ContactUs from "./components/ContactUs/Contact";
 import Admin from "./components/Admin/Admin1";
-import LoginPromp from "./components/LoginPrompt/LoginPrompt1"
+import LoginPromp from "./components/LoginPrompt/LoginPrompt1";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Particle from "./components/Particle";
 //import './tailwind.css';
 // import Resume from "./components/Resume/ResumeNew";
 
@@ -40,7 +41,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       upadateLoad(false);
-    }, 1200);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -76,6 +77,7 @@ function App() {
               <Route path="/LoginPromp" element={<LoginPromp />} />
             </Routes>
           </UserProvider>
+          <Particle />
           <Footer />
         </div>
       </Router>
