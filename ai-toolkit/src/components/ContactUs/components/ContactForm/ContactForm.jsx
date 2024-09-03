@@ -4,7 +4,8 @@
 // import Button from "../Button/Button";
 // import styles from "./ContactForm.module.css";
 // import { useState } from "react";
-// //import image2 from "../image2.png"
+// import image2 from "../image2.png"; // Import the image
+
 // const ContactForm = () => {
 //   const [name, setName] = useState(undefined);
 //   const [email, setEmail] = useState(undefined);
@@ -49,7 +50,7 @@
 
 //           <div className={styles.form_control}>
 //             <label htmlFor="text">Text</label>
-//             <textarea type="text" name="text" placeholder="Discription" />
+//             <textarea type="text" name="text" placeholder="Description" />
 //           </div>
 //           <div className={styles.submit}>
 //             <Button text="SUBMIT" />
@@ -61,13 +62,14 @@
 //         </form>
 //       </div>
 //       <div className={styles.contact_image}>
-//         <img src="image2"  alt="Contact form illustration" />
+//         <img src={image2} alt="Contact form illustration" />
 //       </div>
 //     </section>
 //   );
 // };
 
 // export default ContactForm;
+
 
 import { MdMessage } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -81,6 +83,7 @@ const ContactForm = () => {
   const [name, setName] = useState(undefined);
   const [email, setEmail] = useState(undefined);
   const [text, setText] = useState(undefined);
+  const [showCallPanel, setShowCallPanel] = useState(false);
 
   const onSubmit = (event) => {
     if (event) {
@@ -91,6 +94,17 @@ const ContactForm = () => {
     }
   };
 
+  const handleSupportChatClick = () => {
+    window.open("https://wa.me/923179889883", "_blank");
+  };
+
+  const handleCallClick = () => {
+    setShowCallPanel(true);
+    setTimeout(() => {
+      setShowCallPanel(false);
+    }, 5000); // Hide panel after 5 seconds
+  };
+
   return (
     <section className={styles.form_section}>
       <div>
@@ -99,8 +113,13 @@ const ContactForm = () => {
             <Button
               text="VIA SUPPORT CHAT"
               icon={<MdMessage fontSize="20px" />}
+              onClick={handleSupportChatClick}
             />
-            <Button text="VIA CALL" icon={<FaPhoneAlt fontSize="20px" />} />
+            <Button
+              text="VIA CALL"
+              icon={<FaPhoneAlt fontSize="20px" />}
+              onClick={handleCallClick}
+            />
           </div>
           <Button
             isOutline="true"
@@ -135,6 +154,11 @@ const ContactForm = () => {
       <div className={styles.contact_image}>
         <img src={image2} alt="Contact form illustration" />
       </div>
+      {showCallPanel && (
+        <div className={styles.call_panel}>
+          Dear User, call on (92-3309271727)
+        </div>
+      )}
     </section>
   );
 };
