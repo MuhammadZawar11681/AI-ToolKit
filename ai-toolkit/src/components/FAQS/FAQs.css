@@ -1,117 +1,62 @@
-/* .faqs-container {
+.faqs-container {
   max-width: 800px;
   margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .accordion .card {
   border: none;
   border-bottom: 1px solid #ddd;
+  border-radius: 0;
 }
 
 .accordion .card-header {
-  background: none;
-  border: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0;
 }
 
 .accordion .btn-link {
-  font-weight: bold;
-  color: #007bff;
-  text-decoration: none;
+  display: block;
   width: 100%;
   text-align: left;
-  padding: 10px 15px;
-  border: 1px solid transparent;
+  padding: 15px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .accordion .btn-link:hover {
   text-decoration: none;
-  background-color: #f7f7f7;
+  background-color: #0056b3;
 }
 
 .accordion .btn-link.collapsed {
-  color: #333;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.accordion .btn-link.collapsed:hover {
+  background-color: #0056b3;
 }
 
 .accordion .card-body {
-  padding: 15px;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.accordion .collapse {
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  overflow: hidden;
 }
 
 .accordion .collapse.show {
-  animation: smoothExpand 0.5s ease-out;
+  max-height: 1000px; /* Ensure this value is enough to fit the content */
+  opacity: 1;
 }
 
-@keyframes smoothExpand {
-  from {
-    opacity: 0;
-    max-height: 0;
-  }
-  to {
-    opacity: 1;
-    max-height: 1000px;
-  }
-} */
-
-
-.faqs-container {
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .accordion .card {
-    border: none;
-    border-bottom: 1px solid #ddd;
-    border-radius: 0;
-  }
-  
-  .accordion .card-header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 0;
-  }
-  
-  .accordion .btn-link {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 15px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .accordion .btn-link:hover {
-    text-decoration: none;
-    background-color: #0056b3;
-  }
-  
-  .accordion .btn-link.collapsed {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .accordion .btn-link.collapsed:hover {
-    background-color: #0056b3;
-  }
-  
-  .accordion .card-body {
-    padding: 20px;
-    background-color: #f7f7f7;
-  }
-  
-  .accordion .collapse {
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-    overflow: hidden;
-  }
-  
-  .accordion .collapse.show {
-    max-height: 1000px; /* Ensure this value is enough to fit the content */
-    opacity: 1;
-  }
-  
-  .accordion .collapse:not(.show) {
-    max-height: 0;
-    opacity: 0;
-  }
-  
+.accordion .collapse:not(.show) {
+  max-height: 0;
+  opacity: 0;
+}
