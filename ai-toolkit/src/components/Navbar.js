@@ -49,8 +49,16 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <img src={logo3} className="img-fluid logo" alt="brand" />
+        <Navbar.Brand className="d-flex">
+          <Link to="/">
+            {" "}
+            {/* Wrap the logo with Link */}
+            <img
+              src={logo3}
+              alt="brand"
+              style={{ width: "80px", height: "70px" }} // Inline styles
+            />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
