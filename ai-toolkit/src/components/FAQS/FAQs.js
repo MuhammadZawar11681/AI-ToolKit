@@ -1,25 +1,38 @@
-import React, { useState } from 'react';
-import './FAQs.css';
+import React, { useState } from "react";
+import "./FAQs.css";
 
 const FAQs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const handleToggle = index => {
+  const handleToggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
   const faqs = [
     {
-      question: "What is the return policy?",
-      answer: "Our return policy lasts 30 days. If 30 days have gone by since your purchase, unfortunately, we can’t offer you a refund or exchange."
+      question: "What is AI ToolKit?",
+      answer:
+        "AI ToolKit is a web application that provides a suite of AI-powered tools, including Content Generator, Text to Image, Text to Speech, Speech to Text, and Text to Video.",
     },
     {
-      question: "How do I track my order?",
-      answer: "Once your order has shipped, we will send you an email with a tracking number and a link to track your package."
+      question: "How does the Content Generator tool work?",
+      answer:
+        "The Content Generator uses advanced AI algorithms to help you create written content based on your input, making it easier to generate high-quality text for various purposes.",
     },
     {
-      question: "Can I purchase items in bulk?",
-      answer: "Yes, we offer bulk purchase options. Please contact our sales team for more information."
+      question: "Can I convert text into images using AI ToolKit?",
+      answer:
+        "Yes, the Text to Image tool in AI ToolKit allows you to generate images based on the text you provide, using AI to interpret and visualize the text creatively.",
+    },
+    {
+      question: "Is it possible to convert speech into text using AI ToolKit?",
+      answer:
+        "Absolutely! The Speech to Text tool transcribes spoken words into written text accurately, which is useful for note-taking, creating subtitles, and more.",
+    },
+    {
+      question: "What formats are supported by the Text to Video tool?",
+      answer:
+        "The Text to Video tool can generate videos from your text inputs, offering various templates and customization options to create engaging video content.",
     },
     // Add more FAQs as needed
   ];
@@ -33,7 +46,9 @@ const FAQs = () => {
             <div className="card-header p-0" id={`heading${index}`}>
               <h5 className="mb-0">
                 <button
-                  className={`btn btn-link btn-block text-left ${activeIndex === index ? '' : 'collapsed'}`}
+                  className={`btn btn-link btn-block text-left ${
+                    activeIndex === index ? "" : "collapsed"
+                  }`}
                   onClick={() => handleToggle(index)}
                   aria-expanded={activeIndex === index}
                   aria-controls={`collapse${index}`}
@@ -44,13 +59,11 @@ const FAQs = () => {
             </div>
             <div
               id={`collapse${index}`}
-              className={`collapse ${activeIndex === index ? 'show' : ''}`}
+              className={`collapse ${activeIndex === index ? "show" : ""}`}
               aria-labelledby={`heading${index}`}
               data-parent="#faqsAccordion"
             >
-              <div className="card-body">
-                {faq.answer}
-              </div>
+              <div className="card-body">{faq.answer}</div>
             </div>
           </div>
         ))}
