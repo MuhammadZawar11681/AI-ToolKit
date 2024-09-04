@@ -2,9 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
+import laptopImg from "../../Assets/Projects/about.png";
 import Toolstack from "./Toolstack";
-
+import Slider from "./LogoSlider";
+import FAQs from "../FAQS/FAQs";
 function About() {
   return (
     <Container fluid className="about-section">
@@ -40,6 +41,9 @@ function About() {
           <strong className="purple">Tools</strong> We Provide
         </h1>
         <Toolstack />
+        <Slider />
+        <FAQs />
+
       </Container>
     </Container>
   );

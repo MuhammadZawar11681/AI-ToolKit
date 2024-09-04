@@ -18,7 +18,10 @@ import Signup from "./components/Login/Signup";
 import Signin from "./components/Login/Signin";
 import ContactUs from "./components/ContactUs/Contact";
 import Admin from "./components/Admin/Admin1";
+import LoginPromp from "./components/LoginPrompt/LoginPrompt1";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Particle from "./components/Particle";
+import FAQs from "./components/FAQS/FAQs";
 //import './tailwind.css';
 // import Resume from "./components/Resume/ResumeNew";
 
@@ -39,7 +42,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       upadateLoad(false);
-    }, 1200);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -54,7 +57,7 @@ function App() {
             <ScrollToTop />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="admin" element={<Admin />} />
+              <Route path="/admin" element={<Admin />} />
               <Route path="/about" element={<About />} />
               <Route path="/Projects" element={<Projects />} />
               <Route path="/tools" element={<Tools />} />
@@ -72,8 +75,11 @@ function App() {
               <Route path="*" element={<Navigate to="/" />} />
               <Route path="/Signup" element={<Signup />} />
               <Route path="/Signin" element={<Signin />} />
+              <Route path="/LoginPromp" element={<LoginPromp />} />
+              <Route path="/FAQs" element={<FAQs />} />
             </Routes>
           </UserProvider>
+          <Particle />
           <Footer />
         </div>
       </Router>

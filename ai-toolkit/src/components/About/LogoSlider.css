@@ -1,0 +1,44 @@
+.logo-slider-container {
+  padding: 20px;
+  /* background-color: #f8f9fa; */
+  border-radius: 10px;
+}
+
+.logo-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  padding-left: 70px;
+}
+
+.logo-slide:hover {
+  transform: scale(1.1);
+}
+
+.logo-image {
+  max-width: 80%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+/* Remove focus outline on click */
+.logo-slide:focus,
+.logo-slide:active,
+.logo-image:focus,
+.logo-image:active {
+  outline: none;
+  border: none;
+}
+
+.slick-dots li button:before {
+  color: #007bff;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #007bff;
+}

@@ -1,0 +1,62 @@
+.faqs-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.accordion .card {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+}
+
+.accordion .card-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0;
+}
+
+.accordion .btn-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.accordion .btn-link:hover {
+  text-decoration: none;
+  background-color: #0056b3;
+}
+
+.accordion .btn-link.collapsed {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.accordion .btn-link.collapsed:hover {
+  background-color: #0056b3;
+}
+
+.accordion .card-body {
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.accordion .collapse {
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  overflow: hidden;
+}
+
+.accordion .collapse.show {
+  max-height: 1000px; /* Ensure this value is enough to fit the content */
+  opacity: 1;
+}
+
+.accordion .collapse:not(.show) {
+  max-height: 0;
+  opacity: 0;
+}
