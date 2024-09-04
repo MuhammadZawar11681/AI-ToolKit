@@ -1,0 +1,71 @@
+.toolstack-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #f8f9fa; /* Background color */
+  padding: 20px 0;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scrolling-text {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+.scroll-item {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 10px 20px;
+  font-size: 1.2rem; /* Adjust font size */
+  font-weight: bold;
+  color: #ffffff; /* Text color */
+  border-radius: 5px;
+  animation: fade 5s ease-in-out infinite;
+}
+
+.scroll-item:nth-child(1) {
+  background-color: #007bff; /* Blue */
+}
+
+.scroll-item:nth-child(2) {
+  background-color: #28a745; /* Green */
+}
+
+.scroll-item:nth-child(3) {
+  background-color: #dc3545; /* Red */
+}
+
+.scroll-item:nth-child(4) {
+  background-color: #ffc107; /* Yellow */
+}
+
+.scroll-item:nth-child(5) {
+  background-color: #17a2b8; /* Teal */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}

@@ -4,6 +4,7 @@ import Particle from "../Particle";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
+import Slider from "./LogoSlider";
 import FAQs from "../FAQS/FAQs";
 function About() {
   return (
@@ -40,6 +41,7 @@ function About() {
           <strong className="purple">Tools</strong> We Provide
         </h1>
         <Toolstack />
+        <Slider />
         <FAQs />
 
       </Container>
