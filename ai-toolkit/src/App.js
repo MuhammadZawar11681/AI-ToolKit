@@ -22,6 +22,7 @@ import LoginPromp from "./components/LoginPrompt/LoginPrompt1";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Particle from "./components/Particle";
 import FAQs from "./components/FAQS/FAQs";
+
 //import './tailwind.css';
 // import Resume from "./components/Resume/ResumeNew";
 
