@@ -16,7 +16,7 @@ function ProjectCards(props) {
         {!props.isBlog && props.demoLink && (
           <Link to={props.demoLink}>
             <button className="btn btn-primary" style={{ marginLeft: "10px" }}>
-              <CgWebsite /> &nbsp; Click
+              <CgWebsite /> &nbsp; Go To
             </button>
           </Link>
         )}

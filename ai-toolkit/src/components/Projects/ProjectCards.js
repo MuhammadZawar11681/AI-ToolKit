@@ -17,9 +17,13 @@ function ProjectCards(props) {
           <Link
             to={props.demoLink}
             className="btn btn-primary"
-            style={{ marginLeft: "10px", textDecoration: "none", color: "white" }}
+            style={{
+              marginLeft: "10px",
+              textDecoration: "none",
+              color: "white",
+            }}
           >
-            <CgWebsite /> &nbsp; Click
+            <CgWebsite /> &nbsp; Go To
           </Link>
         )}
       </Card.Body>
