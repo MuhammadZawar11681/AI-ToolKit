@@ -7,17 +7,17 @@ import { useState } from "react";
 import image2 from "../image2.png"; // Import the image
 
 const ContactForm = () => {
-  const [name, setName] = useState(undefined);
-  const [email, setEmail] = useState(undefined);
-  const [text, setText] = useState(undefined);
+  // const [name, setName] = useState(undefined);
+  // const [email, setEmail] = useState(undefined);
+  // const [text, setText] = useState(undefined);
   const [showCallPanel, setShowCallPanel] = useState(false);
 
   const onSubmit = (event) => {
     if (event) {
       event.preventDefault(); //for preventing page default refresh
-      setName(event.target[0].value);
-      setEmail(event.target[1].value);
-      setText(event.target[2].value);
+      // setName(event.target[0].value);
+      // setEmail(event.target[1].value);
+      // setText(event.target[2].value);
     }
   };
 
@@ -57,7 +57,7 @@ const ContactForm = () => {
         <form onSubmit={onSubmit} className={styles.form}>
           <div className={styles.form_control}>
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" placeholder="Jhon Peter" />
+            <input type="text" name="name" placeholder="John Peter" />
           </div>
 
           <div className={styles.form_control}>
@@ -72,10 +72,10 @@ const ContactForm = () => {
           <div className={styles.submit}>
             <Button text="SUBMIT" />
           </div>
-          <p>
+          {/* <p>
             {`Name: ${name}`} <br /> {`Email: ${email}`} <br />{" "}
             {`Text: ${text}`}
-          </p>
+          </p> */}
         </form>
       </div>
       <div className={styles.contact_image}>
