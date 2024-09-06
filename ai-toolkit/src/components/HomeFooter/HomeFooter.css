@@ -6,14 +6,14 @@
 }
 
 .homefooter h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #ffd700;
   margin-bottom: 15px;
   animation: fadeIn 2s ease-in-out;
 }
 
 .homefooter p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .homefooter .btn-link {
-  background-color: #9370DB;
+  background-color: #9370db;
   color: white;
   border: none;
   transition: background-color 0.3s ease;
@@ -50,7 +50,7 @@
 }
 
 .homefooter .btn-link:hover {
-  background-color: #BA55D3;
+  background-color: #ba55d3;
 }
 
 .homefooter .logo-container {
@@ -65,13 +65,13 @@
 }
 
 .homefooter .ai-toolkit {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #ffd700;
   animation: fadeIn 2s ease-in-out;
 }
 
 .homefooter .contact-info {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .homefooter .contact-info .call,
@@ -100,7 +100,7 @@
 }
 
 .back-to-top:hover {
-  background-color: #FF4500;
+  background-color: #ff4500;
 }
 
 @keyframes rotate {
