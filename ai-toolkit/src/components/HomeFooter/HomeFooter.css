@@ -47,6 +47,8 @@
   transition: background-color 0.3s ease;
   padding: 10px;
   text-align: center;
+  text-decoration: none !important;
+  color: inherit;
 }
 
 .homefooter .btn-link:hover {

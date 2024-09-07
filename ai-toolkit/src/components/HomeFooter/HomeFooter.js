@@ -39,8 +39,8 @@ const HomeFooter = () => {
             <p>All our pages</p>
             <ul className="list-unstyled">
               <li>
-                <Link to="/" className="btn btn-link w-75 mb-2">
-                  Home
+                <Link to="/Tutorial" className="btn btn-link w-75 mb-2">
+                  Tutorial
                 </Link>
               </li>
               <li>
