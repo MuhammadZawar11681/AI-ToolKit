@@ -6,6 +6,7 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import HomeFooter from "../HomeFooter/HomeFooter";
 import ImageSlider from "../imageSlider";
+import video from "../../Assets/video/NextJs.mp4";
 
 function Home() {
   return (
@@ -44,6 +45,10 @@ function Home() {
         </Container>
       </Container>
       <Home2 />
+      <div>
+        <h1>React video player</h1>
+        <video controls width="50%" src={video}></video>
+      </div>
       <HomeFooter />
     </section>
   );
