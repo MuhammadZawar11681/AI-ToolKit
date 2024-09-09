@@ -78,7 +78,7 @@ function ContentGenerator() {
                 AIToolkit
                 <span className="mx-2">
                   <i
-                    className="fas fa-heart text-red-500"
+                    className="fas fa-code text-red-500"
                     aria-hidden="true"
                   ></i>
                 </span>
