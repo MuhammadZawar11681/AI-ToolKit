@@ -211,7 +211,7 @@ const TextToSpeech2 = () => {
             </Button>
           )}
         </Space>
-        {audioUrl && (
+        {/* {audioUrl && (
           <Row>
             <Col>
               <Tooltip
@@ -236,7 +236,7 @@ const TextToSpeech2 = () => {
               </Tooltip>
             </Col>
           </Row>
-        )}
+        )} */}
       </div>
     </div>
   );

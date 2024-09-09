@@ -1,10 +1,10 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import video1 from "../../Assets/video/ContentGenerator.mp4";
-import video2 from "../../Assets/video/NextJs.mp4";
-import video3 from "../../Assets/video/NextJs.mp4";
-import video4 from "../../Assets/video/NextJs.mp4";
-import video5 from "../../Assets/video/NextJs.mp4";
+import video2 from "../../Assets/video/Text_Image.mp4";
+import video3 from "../../Assets/video/Text_speech.mp4";
+import video4 from "../../Assets/video/Speech_text.mp4";
+import video5 from "../../Assets/video/Text_video.mp4";
 import "./TutorialCard.css"; // Custom CSS for the card
 
 function TutorialCard({ category }) {
