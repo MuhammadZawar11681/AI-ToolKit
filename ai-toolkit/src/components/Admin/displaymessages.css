@@ -1,0 +1,85 @@
+
+/* Specific styles for the message display component */
+.message-display {
+  margin-top: 20px;
+  padding-top: 100px;
+}
+
+/* Unread messages button */
+.unread-messages-btn {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Button animation */
+.animated-btn {
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+  padding: 5px 10px; /* Smaller padding for smaller button */
+  font-size: 0.85rem; /* Smaller font size */
+}
+
+/* Button hover effect */
+.animated-btn:hover {
+  transform: scale(1.1);
+  background-color: #0056b3;
+}
+
+/* Table row hover effect */
+.table-hover tbody tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+/* Styling for unread (warning) and read (secondary) rows */
+.table-warning {
+  background-color: #fff3cd !important;
+  transition: background-color 0.3s ease;
+}
+
+.table-secondary {
+  background-color: #e2e3e5 !important;
+  transition: background-color 0.3s ease;
+}
+
+/* Add column borders to the table */
+.table-bordered th, .table-bordered td {
+  border: 1px solid #dee2e6; /* Bootstrap's default border color */
+}
+
+/* Heading with stylish design */
+.UserMeg-heading {
+  font-weight: bold;
+  font-size: 2.5rem; 
+  color: #ffffff; 
+  background-color: #007bff; 
+  padding: 15px 20px; 
+  border-radius: 8px; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .UserMeg-heading {
+    font-size: 2rem;
+  }
+
+  .unread-messages-btn {
+    margin-bottom: 15px;
+  }
+
+  .message-display {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .UserMeg-heading {
+    font-size: 1.8rem;
+  }
+
+  .message-display {
+    padding-top: 40px;
+  }
+}
+
