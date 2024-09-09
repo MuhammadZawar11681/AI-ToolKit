@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
@@ -10,33 +9,6 @@ const API_TOKEN = "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";
 const AboutCard = () => {
   const [loading, setLoading] = useState(false);
   const [output, setOutput] = useState(null);
-
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   setLoading(true);
-
-  //   const input = event.target.elements.input.value;
-  //   const response = await fetch(
-  //     "https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4",
-  //     {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Authorization: `Bearer ${API_TOKEN}`,
-  //       },
-  //       body: JSON.stringify({ inputs: input }),
-  //     }
-  //   );
-
-  //   if (!response.ok) {
-  //     throw new Error("Failed to generate image");
-  //   }
-
-  //   const blob = await response.blob();
-  //   setOutput(URL.createObjectURL(blob));
-  //   setLoading(false);
-  // };
-
 
   // gpt code starts
   const handleSubmit = async (event) => {
@@ -94,12 +66,19 @@ const AboutCard = () => {
 
   return (
     <Card className="quote-card-view h-600">
-      <Card.Body >
+      <Card.Body>
         <blockquote className="blockquote mb-0 text-center">
           <div className="container mt-3">
-            <h1 className="mb-4">Convert your Text To Image With <span className="purple">AI</span></h1>
-            <p className="lead">Describe the image you want to generate below</p>
-            <Form onSubmit={handleSubmit} className="row justify-content-center">
+            <h1 className="mb-4">
+              Convert your Text To Image With <span className="purple">AI</span>
+            </h1>
+            <p className="lead">
+              Describe the image you want to generate below
+            </p>
+            <Form
+              onSubmit={handleSubmit}
+              className="row justify-content-center"
+            >
               <Form.Group controlId="formInput" className="col-8 col-md-6 mb-2">
                 <Form.Control
                   type="text"
@@ -132,9 +111,17 @@ const AboutCard = () => {
             </Form>
             {output && (
               <div className="text-center mt-3">
-                <img src={output} alt="Generated Art" className="img-fluid mb-3" />
+                <img
+                  src={output}
+                  alt="Generated Art"
+                  className="img-fluid mb-3"
+                />
                 <div className="mt-2">
-                  <Button id="dld-btn" className="purple" onClick={handleDownload}>
+                  <Button
+                    id="dld-btn"
+                    className="purple"
+                    onClick={handleDownload}
+                  >
                     Download
                   </Button>
                 </div>
@@ -148,6 +135,3 @@ const AboutCard = () => {
 };
 
 export default AboutCard;
-
-
-

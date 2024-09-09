@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import Aboutcard from "./ImageCard";
+import ImageCard from "./ImageCard";
 
-function About() {
+function Text_Image() {
   return (
     <Container fluid className="about-section">
       <Particle />
@@ -20,7 +20,7 @@ function About() {
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
               <strong className="purple">Text To Image Generation</strong>
             </h1>
-            <Aboutcard />
+            <ImageCard />
           </Col>
         </Row>
 
@@ -33,4 +33,4 @@ function About() {
   );
 }
 
-export default About;
+export default Text_Image;
