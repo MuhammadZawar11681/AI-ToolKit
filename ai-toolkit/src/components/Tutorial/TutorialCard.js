@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import video1 from "../../Assets/video/NextJs.mp4";
+import video1 from "../../Assets/video/ContentGenerator.mp4";
 import video2 from "../../Assets/video/NextJs.mp4";
 import video3 from "../../Assets/video/NextJs.mp4";
 import video4 from "../../Assets/video/NextJs.mp4";
