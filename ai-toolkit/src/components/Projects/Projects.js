@@ -29,7 +29,7 @@ function Projects() {
               imgPath={ContentGenerator}
               isBlog={false}
               title="Content Generation"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              description="Unleash the power of AI with our Content Generator. Simply provide a query, and watch as engaging, informative content is crafted for you in seconds. Perfect for blogs, articles, or creative writing needs!"
               demoLink="/ContentGeneration"
             />
           </Col>
@@ -38,8 +38,17 @@ function Projects() {
             <ProjectCard
               imgPath={TextToImage}
               isBlog={false}
-              title="Test to Image (Guest)"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              title="Text to Image (Guest)"
+              description={
+                <>
+                  Turn your ideas into visuals! Provide a simple prompt, and
+                  this tool generates an impressive image for you. No sign-up /
+                  sign-in required—just imagine, input, and see your vision come
+                  to life.
+                  <br />
+                  <br />
+                </>
+              }
               demoLink="/TextToImage"
             />
           </Col>
@@ -48,8 +57,15 @@ function Projects() {
             <ProjectCard
               imgPath={TextToImage2}
               isBlog={false}
-              title="Test to Image (User)"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              title="Text to Image (User)"
+              description={
+                <>
+                  Take your prompts to the next level! Input your idea and
+                  receive a high-quality, advanced image complete with a
+                  detailed description. Tailored for users seeking precision and
+                  premium results.
+                </>
+              }
               demoLink="/TextToImage2"
             />
           </Col>
@@ -59,7 +75,15 @@ function Projects() {
               imgPath={TextToSpeech2}
               isBlog={false}
               title="Text to Speech (Guest)"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              description={
+                <>
+                  Transform your written text into clear, lifelike audio. Enter
+                  your text, and the tool will generate a speech version in just
+                  moments. Effortless conversion, perfect for quick projects.
+                  <br />
+                  <br />
+                </>
+              }
               demoLink="/TextToSpeech1"
             />
           </Col>
@@ -69,7 +93,16 @@ function Projects() {
               imgPath={TextToSpeech}
               isBlog={false}
               title="Text to Speech (User)"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              description={
+                <>
+                  For users looking for high-quality speech outputs, this tool
+                  converts your text into audio with refined voice tones and
+                  enhanced clarity. Choose from multiple voice styles to suit
+                  your needs.
+                  <br />
+                  <br />
+                </>
+              }
               demoLink="/TextToSpeech2"
             />
           </Col>
@@ -79,7 +112,7 @@ function Projects() {
               imgPath={SpeechToText}
               isBlog={false}
               title="Speech to Text"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              description="Speak, and let our tool do the typing! Convert spoken words into text with high accuracy. Whether for notes, documentation, or creative brainstorming, capture every word with ease."
               // ghLink="/ "
               demoLink="/SpeechToText"
             />
@@ -90,7 +123,7 @@ function Projects() {
               imgPath={TextToVideo}
               isBlog={false}
               title="Text to Video"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              description="Create captivating videos with just a prompt! Enter your idea, and watch as it transforms into a dynamic video. Ideal for presentations, marketing, or creative content creation."
               // ghLink="/ "
               demoLink="/TextToVideo"
             />
@@ -101,7 +134,15 @@ function Projects() {
               imgPath={AllTools}
               isBlog={false}
               title="Admin"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              description={
+                <>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                </>
+              }
               // ghLink="/ "
               demoLink="/admin"
             />

@@ -7,7 +7,7 @@ import {
   Select,
   Alert,
   Space,
-  Tooltip,
+  // Tooltip,
   InputNumber,
   Col,
   Row,
@@ -17,7 +17,7 @@ import AudioPlayer from "react-h5-audio-player";
 import { formats, models, voices } from "./utils/constants";
 import {
   arrayToSelectOptions,
-  calculateEstimatedUsage,
+  // calculateEstimatedUsage,
   fetchAudioFileBlob,
 } from "./utils/helpers";
 
@@ -37,8 +37,8 @@ const TextToSpeech2 = () => {
   const [audioUrl, setAudioUrl] = useState();
   const [error, setError] = useState();
   const [fetchingAudio, setFetchingAudio] = useState(false);
-  const [textLength, setTextLength] = useState();
-  const [modelType, setModelType] = useState("");
+  // const [textLength, setTextLength] = useState();
+  // const [modelType, setModelType] = useState("");
   const [speed, setSpeed] = useState(1.0);
 
   const onSpeedChange = (newSpeed) => {
@@ -53,8 +53,8 @@ const TextToSpeech2 = () => {
     const speed = values.speed;
     const apiKey = API_KEY;
 
-    setTextLength(text.length);
-    setModelType(model);
+    // setTextLength(text.length);
+    // setModelType(model);
 
     setFetchingAudio(true);
     const response = await fetchAudioFileBlob(
@@ -211,7 +211,7 @@ const TextToSpeech2 = () => {
             </Button>
           )}
         </Space>
-        {audioUrl && (
+        {/* {audioUrl && (
           <Row>
             <Col>
               <Tooltip
@@ -236,7 +236,7 @@ const TextToSpeech2 = () => {
               </Tooltip>
             </Col>
           </Row>
-        )}
+        )} */}
       </div>
     </div>
   );

@@ -39,8 +39,8 @@ const HomeFooter = () => {
             <p>All our pages</p>
             <ul className="list-unstyled">
               <li>
-                <Link to="/" className="btn btn-link w-75 mb-2">
-                  Home
+                <Link to="/Tutorial" className="btn btn-link w-75 mb-2">
+                  Tutorial
                 </Link>
               </li>
               <li>
@@ -83,7 +83,21 @@ const HomeFooter = () => {
         </Row>
       </Container>
       <Button variant="warning" className="back-to-top" onClick={scrollToTop}>
-        <i className="fas fa-arrow-up"></i>
+        Back to Top
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          className="bi bi-arrow-up ml-2"
+          viewBox="0 0 16 16"
+          style={{ marginLeft: "10px" }} // Adjust spacing
+        >
+          <path
+            fillRule="evenodd"
+            d="M8 12a.5.5 0 0 0 .5-.5V3.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 3.707V11.5A.5.5 0 0 0 8 12z"
+          />
+        </svg>
       </Button>
     </footer>
   );

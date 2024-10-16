@@ -1,27 +1,137 @@
-/* Add this in your main CSS file */
-.sidebar {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 20px;
+.admin-dashboard {
+  padding: 50px;
+  padding-top: 150px;
 }
 
-.main-content {
-  margin-left: 200px;
-  padding: 20px;
-}
-
-.card {
+.admin-heading {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #2c3e50; /* Darker blue for better contrast */
+  font-size: 2.5rem;
+  background: linear-gradient(
+    90deg,
+    #0e1b27,
+    #b0d4f1
+  ); /* Lighter blue gradient */
+  padding: 10px 15px;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Adds shadow behind the text */
 }
 
-.card-title {
+.admin-subheading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #34495e; /* Darker gray for better readability */
+  background: linear-gradient(
+    90deg,
+    #0e1b27,
+    #c1e1b4
+  ); /* Lighter green gradient */
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Adds shadow behind the text */
+  margin-top: 10px;
+}
+
+.admin-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* On hover, card grows slightly and shadow becomes more prominent */
+.admin-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Shadow grows on hover */
+}
+
+.admin-card-body {
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f2f2f2 100%
+  ); /* Subtle background gradient */
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 992px) {
+  /* For tablets and smaller desktops */
+  .admin-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For small tablets and large phones */
+  .admin-card {
+    border-radius: 10px;
+  }
+
+  .admin-card-body {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* For mobile devices */
+  .admin-card {
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+
+  .admin-card-body {
+    padding: 12px;
+  }
+}
+
+/* Add a fade-in animation for the card when it appears */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.admin-card {
+  animation: fadeInUp 0.6s ease-in-out; /* Card fades in with upward motion */
+}
+
+.admin-title {
   font-size: 1.2rem;
   font-weight: bold;
+  color: #6c757d;
 }
 
-.table th,
-.table td {
-  vertical-align: middle;
+.admin-text {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.admin-button {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.admin-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.animate__animated.animate__zoomIn {
+  animation-duration: 0.6s;
 }

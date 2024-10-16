@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const Replicate = require("replicate");
 const EmployeeModel = require("./models/AIToolkitModel");
+const MessageModel = require("./models/MessageModel");
 
 const app = express();
 app.use(express.json());
@@ -144,6 +145,45 @@ app.get("/admin/metrics", async (req, res) => {
     res.json({ totalUsers, activeUsers, pendingRequests });
   } catch (error) {
     res.status(500).json({ error: error.message });
+  }
+});
+
+// messages
+// API to submit the contact form
+app.post("/contact", async (req, res) => {
+  try {
+    const { name, email, text } = req.body;
+    const newMessage = new MessageModel({ name, email, text });
+    await newMessage.save();
+    res.json({ message: "Message sent successfully!" });
+  } catch (error) {
+    res.status(500).json({ message: "Server error. Please try again later." });
+  }
+});
+
+// API to get all messages
+app.get("/messages", async (req, res) => {
+  try {
+    const messages = await MessageModel.find({});
+    res.json(messages);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to fetch messages." });
+  }
+});
+
+// API to toggle read/unread status
+app.put("/message/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const message = await MessageModel.findById(id);
+    if (!message) {
+      return res.status(404).json({ message: "Message not found" });
+    }
+    message.isRead = !message.isRead;
+    await message.save();
+    res.json({ message: "Status updated successfully", message });
+  } catch (error) {
+    res.status(500).json({ message: "Error updating status" });
   }
 });
 

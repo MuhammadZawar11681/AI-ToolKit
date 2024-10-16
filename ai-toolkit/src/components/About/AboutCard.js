@@ -31,6 +31,9 @@ function AboutCard() {
               <ImPointRight /> Content Generation
             </li>
             <li className="about-activity">
+              <ImPointRight /> Text to Image
+            </li>
+            <li className="about-activity">
               <ImPointRight /> Text To Speech
             </li>
             <li className="about-activity">

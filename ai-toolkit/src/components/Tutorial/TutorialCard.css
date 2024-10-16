@@ -1,0 +1,95 @@
+/* Layout for video cards */
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Increase the gap between cards */
+    padding: 10px; /* Add some padding */
+  }
+  
+  /* Video card styling */
+  .video-card {
+    flex: 1 1 45%; /* Set the width of each card to about 45% of the container for 2 cards per row */
+    max-width: 45%; /* Ensure the cards are constrained to 45% width */
+    height: 400px; /* Increase height of the video card */
+    background-color: #282c34;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .video-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Different color for each card */
+  .card-style-0 {
+    background-color: #161638;
+  }
+  
+  .card-style-1 {
+    background-color: #1B435E;
+  }
+  
+  .card-style-2 {
+    background-color: #38667E;
+  }
+  
+  .card-style-3 {
+    background-color: #563457;
+  }
+  
+  .card-style-4 {
+    background-color: #3A2B50;
+  }
+  
+  /* Video title styling */
+  .video-title {
+    color: #fff;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+  
+  /* Video player styling */
+  .video-player {
+    width: 100%;
+    height: 250px; /* Increase video player height */
+    border-radius: 8px;
+  }
+  
+  /* Make cards responsive */
+  @media (max-width: 768px) {
+    .video-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .video-card {
+      width: 90%; /* Set video card width to 90% on small screens */
+      height: auto; /* Adjust height for responsiveness */
+    }
+  }
+  
+  /* Styling filter buttons */
+  .filter-buttons {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .filter-button {
+    margin: 0 5px;
+    background-color: #a500ff !important;
+    color: #fff !important;
+    border-radius: 30px !important;
+    padding: 10px 20px !important;
+    font-size: 1rem !important;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .filter-button:hover {
+    background-color: #6f00ff !important;
+  }
+  

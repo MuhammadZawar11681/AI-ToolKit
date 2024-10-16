@@ -22,6 +22,8 @@ import LoginPromp from "./components/LoginPrompt/LoginPrompt1";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Particle from "./components/Particle";
 import FAQs from "./components/FAQS/FAQs";
+import Tutorial from "./components/Tutorial/Tutorial";
+import DisplayMessages from "./components/Admin/DisplayMessages";
 
 //import './tailwind.css';
 // import Resume from "./components/Resume/ResumeNew";
@@ -78,6 +80,8 @@ function App() {
               <Route path="/Signin" element={<Signin />} />
               <Route path="/LoginPromp" element={<LoginPromp />} />
               <Route path="/FAQs" element={<FAQs />} />
+              <Route path="/Tutorial" element={<Tutorial />} />
+              <Route path="/DisplayMessages" element={<DisplayMessages />} />
             </Routes>
           </UserProvider>
           <Particle />
@@ -89,3 +93,5 @@ function App() {
 }
 
 export default App;
+
+// main 3

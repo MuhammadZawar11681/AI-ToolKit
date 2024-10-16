@@ -7,22 +7,50 @@ import { useState } from "react";
 import image2 from "../image2.png"; // Import the image
 
 const ContactForm = () => {
-  const [name, setName] = useState(undefined);
-  const [email, setEmail] = useState(undefined);
-  const [text, setText] = useState(undefined);
+  // const [name, setName] = useState(undefined);
+  // const [email, setEmail] = useState(undefined);
+  // const [text, setText] = useState(undefined);
+  const [formData, setFormData] = useState({ name: "", email: "", text: "" });
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
   const [showCallPanel, setShowCallPanel] = useState(false);
 
-  const onSubmit = (event) => {
-    if (event) {
-      event.preventDefault(); //for preventing page default refresh
-      setName(event.target[0].value);
-      setEmail(event.target[1].value);
-      setText(event.target[2].value);
-    }
+  // const onSubmit = (event) => {
+  //   if (event) {
+  //     event.preventDefault(); //for preventing page default refresh
+  //     // setName(event.target[0].value);
+  //     // setEmail(event.target[1].value);
+  //     // setText(event.target[2].value);
+  //   }
+  // };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSupportChatClick = () => {
     window.open("https://wa.me/923179889883", "_blank");
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const response = await fetch("http://localhost:3001/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setMessage("Message sent successfully!");
+      } else {
+        setMessage(data.message);
+      }
+    } catch (error) {
+      setMessage("Error sending message. Please try again later.");
+    }
+    setLoading(false);
   };
 
   const handleCallClick = () => {
@@ -54,28 +82,46 @@ const ContactForm = () => {
             icon={<HiMail fontSize="20px" />}
           />
         </div>
-        <form onSubmit={onSubmit} className={styles.form}>
+        <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.form_control}>
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" placeholder="Jhon Peter" />
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="John Peter"
+            />
           </div>
 
           <div className={styles.form_control}>
             <label htmlFor="email">Email</label>
-            <input type="text" name="email" placeholder="abc@example.com" />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="abc@example.com"
+            />
           </div>
 
           <div className={styles.form_control}>
             <label htmlFor="text">Text</label>
-            <textarea type="text" name="text" placeholder="Description" />
+            <textarea
+              type="text"
+              name="text"
+              value={formData.text}
+              onChange={handleChange}
+              placeholder="Description"
+            />
           </div>
           <div className={styles.submit}>
-            <Button text="SUBMIT" />
+            <Button
+              text={loading ? "Sending..." : "SUBMIT"}
+              disabled={loading}
+            />
           </div>
-          <p>
-            {`Name: ${name}`} <br /> {`Email: ${email}`} <br />{" "}
-            {`Text: ${text}`}
-          </p>
+          {message && <p>{message}</p>}
         </form>
       </div>
       <div className={styles.contact_image}>
@@ -91,3 +137,87 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+// import { useState } from "react";
+// import { MdMessage } from "react-icons/md";
+// import { FaPhoneAlt } from "react-icons/fa";
+// import { HiMail } from "react-icons/hi";
+// import Button from "../Button/Button";
+// import styles from "./ContactForm.module.css";
+
+// const ContactForm = () => {
+//   const [formData, setFormData] = useState({ name: "", email: "", text: "" });
+//   const [message, setMessage] = useState("");
+//   const [loading, setLoading] = useState(false);
+
+//   const handleChange = (e) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value });
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     setLoading(true);
+//     try {
+//       const response = await fetch("http://localhost:3001/contact", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify(formData),
+//       });
+//       const data = await response.json();
+//       if (response.ok) {
+//         setMessage("Message sent successfully!");
+//       } else {
+//         setMessage(data.message);
+//       }
+//     } catch (error) {
+//       setMessage("Error sending message. Please try again later.");
+//     }
+//     setLoading(false);
+//   };
+
+//   return (
+//     <section className={styles.form_section}>
+//       <form onSubmit={handleSubmit} className={styles.form}>
+//         <div className={styles.form_control}>
+//           <label htmlFor="name">Name</label>
+//           <input
+//             type="text"
+//             name="name"
+//             value={formData.name}
+//             onChange={handleChange}
+//             placeholder="John Peter"
+//           />
+//         </div>
+
+//         <div className={styles.form_control}>
+//           <label htmlFor="email">Email</label>
+//           <input
+//             type="email"
+//             name="email"
+//             value={formData.email}
+//             onChange={handleChange}
+//             placeholder="abc@example.com"
+//           />
+//         </div>
+
+//         <div className={styles.form_control}>
+//           <label htmlFor="text">Message</label>
+//           <textarea
+//             name="text"
+//             value={formData.text}
+//             onChange={handleChange}
+//             placeholder="Description"
+//           />
+//         </div>
+
+//         <div className={styles.submit}>
+//           <Button text={loading ? "Sending..." : "SUBMIT"} disabled={loading} />
+//         </div>
+
+//         {message && <p>{message}</p>}
+//       </form>
+//     </section>
+//   );
+// };
+
+// export default ContactForm;
