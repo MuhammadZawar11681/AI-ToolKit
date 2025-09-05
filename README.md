@@ -1,6 +1,6 @@
 # AI-ToolKit
 This is our Final year Project ( FYP ).
 # Team Members
-<b> Muhammad Youshaa and Muhammad Zawar. </b>
+<b> Mehmood Ul Hasan & Syed Aqil Shah. </b>
 # Supervisor 
-<b> Mr. Shehzad Saifullah
+<b> Mr. Irfanullah Khan
